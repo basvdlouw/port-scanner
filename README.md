@@ -2,6 +2,8 @@
 
 - Project uses npm to manage packages
 - Project uses TypeScript and enforces certain code styling guides using `.eslintrc.js`
+- `./server` containing server side code
+- `./client` containing files that will be served to the client
 
 # Prerequisites
 
@@ -10,10 +12,16 @@
 # Available commands
 
 ```
+npm run clean
+```
+
+Cleans `./dist` folder
+
+```
 npm run build
 ```
 
-This compiles TypeScript to JavaScript and copies static files to `dist/` folder.
+Runs clean, compiles TypeScript to JavaScript, and copies static files to `./dist` folder.
 
 ```
 npm start
