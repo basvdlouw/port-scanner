@@ -87,7 +87,7 @@ function analyzePostScanResults(
   const averageScanDuration = numScans > 0 ? totalDuration / numScans : 0;
 
   console.log(
-    `Average duration for ${numScans} scans open ports was: ${averageScanDuration}, excluding confirmed open ports and ports 1-1024`
+    `Average duration for ${numScans} scans was: ${averageScanDuration}, this statistic excludes confirmed open ports and ports 1-1024`
   );
 
   const deviantScanResults = getScanResultsBelowThresholdDuration(
