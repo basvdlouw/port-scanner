@@ -1,4 +1,4 @@
-import { ResultsStore } from "./results-store";
+import { ResultsStore } from "./results-store.js";
 
 export class ConcurrentQueue<T, E extends any[]> {
   private readonly queue: Array<{

@@ -1,8 +1,8 @@
-import { type Measurement } from "./models/measurement";
-import { type Port } from "./models/port";
-import { PortStatus } from "./models/port-status";
-import { type ScanResult } from "./models/scan-result";
-import { displayResults } from "./utils";
+import { type Measurement } from "./models/measurement.js";
+import { type Port } from "./models/port.js";
+import { PortStatus } from "./models/port-status.js";
+import { type ScanResult } from "./models/scan-result.js";
+import { displayResults } from "./utils.js";
 
 async function scanPort(port: Port, timeout: number): Promise<ScanResult> {
   const controller = new AbortController();

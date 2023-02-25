@@ -1,5 +1,5 @@
-import { type Measurement } from "./measurement";
-import { type Port } from "./port";
+import { type Measurement } from "./measurement.js";
+import { type Port } from "./port.js";
 
 export interface ScanResult {
   measurement: Measurement;

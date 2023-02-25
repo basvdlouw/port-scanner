@@ -10,12 +10,7 @@ app.use(
     extensions: ["html"]
   })
 );
-app.use(
-  "/js",
-  express.static(path.join(__dirname, "../public/"), {
-    extensions: ["js"]
-  })
-);
+app.use("/js", express.static(path.join(__dirname, "../public/")));
 
 app.listen(port, () => {
   console.log(`Express is listening at http://localhost:${port}`);

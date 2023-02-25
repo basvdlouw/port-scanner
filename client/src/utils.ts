@@ -1,6 +1,6 @@
-import { Measurement } from "./models/measurement";
-import { Port } from "./models/port";
-import { PortStatus } from "./models/port-status";
+import { Measurement } from "./models/measurement.js";
+import { Port } from "./models/port.js";
+import { PortStatus } from "./models/port-status.js";
 
 export function portRangeIsValid(start: number, end: number): boolean {
   if (start <= 0 || end >= 65536 || start > end) return false;

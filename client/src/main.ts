@@ -1,14 +1,14 @@
-import { ConcurrentQueue } from "./concurrent-queue";
-import { PortStatus } from "./models/port-status";
-import { type Port } from "./models/port";
+import { ConcurrentQueue } from "./concurrent-queue.js";
+import { PortStatus } from "./models/port-status.js";
+import { type Port } from "./models/port.js";
 import {
   displayResults,
   portRangeIsValid,
   sortTableByPortNumber
-} from "./utils";
-import { analyzePort } from "./port-scanner";
-import { ResultsStore } from "./results-store";
-import { ScanResult } from "./models/scan-result";
+} from "./utils.js";
+import { analyzePort } from "./port-scanner.js";
+import { ResultsStore } from "./results-store.js";
+import { ScanResult } from "./models/scan-result.js";
 
 const localhost = "127.0.0.1";
 const startPortScanner = document.getElementById("startPortScanner");
