@@ -1,8 +1,8 @@
 import { type Port } from "./models/port";
 import { PortStatus } from "./models/port-status";
 
-export async function analyzePort(port: Port, timeout: number): Promise<void> {
-  await new Promise((resolve, _reject) => {
+export async function analyzePort(port: Port, timeout: number): Promise<Port> {
+  return await new Promise<Port>((resolve) => {
     const socket = new WebSocket(`ws://${port.ipaddress}:${port.number}`);
 
     const timer = setTimeout(() => {
@@ -11,7 +11,7 @@ export async function analyzePort(port: Port, timeout: number): Promise<void> {
         `Port: ${port.number} timed out after ${timeout} milliseconds`
       );
       socket.close();
-      resolve();
+      resolve(port);
     }, timeout);
 
     socket.onopen = async () => {
@@ -20,7 +20,7 @@ export async function analyzePort(port: Port, timeout: number): Promise<void> {
       clearTimeout(timer);
       port.status = PortStatus.OPEN;
       socket.close();
-      resolve();
+      resolve(port);
     };
 
     socket.onmessage = () => {
@@ -29,7 +29,7 @@ export async function analyzePort(port: Port, timeout: number): Promise<void> {
       clearTimeout(timer);
       port.status = PortStatus.MESSAGE;
       socket.close();
-      resolve();
+      resolve(port);
     };
 
     socket.onerror = () => {
@@ -37,15 +37,22 @@ export async function analyzePort(port: Port, timeout: number): Promise<void> {
       port.status = PortStatus.ERROR;
       console.log(`Port: ${port.number} received error`);
       socket.close();
-      resolve();
+      resolve(port);
     };
 
     socket.onclose = () => {
       // Only reject if the status has not been set yet
-      port.status = PortStatus.CLOSE;
+      if (
+        port.status !== PortStatus.TIMEOUT &&
+        port.status !== PortStatus.OPEN &&
+        port.status !== PortStatus.MESSAGE &&
+        port.status !== PortStatus.ERROR
+      ) {
+        port.status = PortStatus.CLOSE;
+      }
       socket.close();
       console.log(`Port: ${port.number} is closed`);
-      resolve();
+      resolve(port);
     };
   });
 }
