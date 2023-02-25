@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
     "rootDirs": ["./", "./../*"],
-    "module": "commonjs",
     "esModuleInterop": true,
-    "target": "es2021",
+    "target": "ES2022",
     "moduleResolution": "node",
+    "module": "ES2022",
     "sourceMap": false,
     "outDir": "../dist/public",
     "strict": true
   },
-  "lib": ["es2021"]
+  "lib": ["ES2022"]
 }

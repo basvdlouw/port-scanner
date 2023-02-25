@@ -1,19 +1,35 @@
-import { TcpScanner } from "./tcpscanner";
+import { ConcurrentQueue } from "./concurrent-queue";
+import { PortStatus } from "./models/port-status";
+import { PortScan } from "./port-scanner";
 import { type Port } from "./models/port";
+import { portRangeIsValid } from "./utils";
 
+const localhost = "127.0.0.1";
+const maxConcurrency = 254;
+const socketTimeout = 2000;
 const button = document.getElementById("startPortScanner");
-const scannerStatus = document.getElementById("portScannerStatus");
+const queue = new ConcurrentQueue(maxConcurrency);
 
 button?.addEventListener("click", function handleClick(event) {
-  const port1: Port = {
-    number: 1,
-    status: "open"
-  };
+  const beginRange = parseInt(
+    (document.getElementById("startPort") as HTMLInputElement).value
+  );
+  const endRange = parseInt(
+    (document.getElementById("endPort") as HTMLInputElement).value
+  );
 
-  const port2: Port = {
-    number: 2,
-    status: "closed"
-  };
-  const tcpScanner = new TcpScanner([port1, port2]);
-  scannerStatus?.append(tcpScanner.toHtmlResults());
+  if (!portRangeIsValid(beginRange, endRange)) {
+    throw new Error("Invalid port range");
+  }
+
+  for (let i = beginRange; i <= endRange; i++) {
+    const port: Port = {
+      ipaddress: localhost,
+      number: i,
+      status: PortStatus.UNKNOWN
+    };
+    queue.enqueue(port, async () => {
+      await PortScan.analyzePort(port, socketTimeout);
+    });
+  }
 });
