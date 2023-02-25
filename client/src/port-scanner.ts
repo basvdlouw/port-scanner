@@ -8,47 +8,44 @@ export async function analyzePort(port: Port, timeout: number): Promise<void> {
     const timer = setTimeout(() => {
       port.status = PortStatus.TIMEOUT;
       console.log(
-        `Websocket did not give a repsonse after ${timeout} milliseconds:`,
-        port.number
+        `Port: ${port.number} timed out after ${timeout} milliseconds`
       );
       socket.close();
-      resolve(port);
+      resolve();
     }, timeout);
 
     socket.onopen = async () => {
       const el = document.getElementById("portScannerStatus");
-      el?.append(`PORT WAS OPEN: ${port.number}`);
+      el?.append(`Port: ${port.number} was open`);
       clearTimeout(timer);
       port.status = PortStatus.OPEN;
-      console.log("Connected to port:", port.number);
       socket.close();
-      resolve(port);
+      resolve();
     };
 
     socket.onmessage = () => {
       const el = document.getElementById("portScannerStatus");
-      el?.append(`GOT MESSAGE FROM PORT: ${port.number}`);
+      el?.append(`Received data from port: ${port.number}`);
       clearTimeout(timer);
       port.status = PortStatus.MESSAGE;
-      console.log("Received data from port:", port.number);
       socket.close();
-      resolve(port);
+      resolve();
     };
 
     socket.onerror = () => {
       clearTimeout(timer);
       port.status = PortStatus.ERROR;
-      // console.log("Error occurred for port:", port.number);
+      console.log(`Port: ${port.number} received error`);
       socket.close();
-      resolve(port);
+      resolve();
     };
 
     socket.onclose = () => {
       // Only reject if the status has not been set yet
       port.status = PortStatus.CLOSE;
       socket.close();
-      // console.log("Closed event occurred for port:", port.number);
-      resolve(port);
+      console.log(`Port: ${port.number} is closed`);
+      resolve();
     };
   });
 }
