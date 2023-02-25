@@ -5,7 +5,6 @@ import { portRangeIsValid } from "./utils";
 import { analyzePort } from "./port-scanner";
 
 const localhost = "127.0.0.1";
-const socketTimeout = 10000;
 const startPortScanner = document.getElementById("startPortScanner");
 const clearResults = document.getElementById("clearResults");
 const table = document.getElementById("portScannerStatus") as HTMLTableElement;
@@ -22,6 +21,10 @@ startPortScanner?.addEventListener("click", function handleClick(event) {
   );
   const nSockets = parseInt(
     (document.getElementById("nSockets") as HTMLInputElement).value
+  );
+
+  const socketTimeout = parseInt(
+    (document.getElementById("socketTimeout") as HTMLInputElement).value
   );
 
   if (!portRangeIsValid(beginRange, endRange)) {
