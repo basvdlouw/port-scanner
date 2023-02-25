@@ -2,7 +2,7 @@ import { type Port } from "./models/port";
 import { PortStatus } from "./models/port-status";
 
 export async function analyzePort(port: Port, timeout: number): Promise<void> {
-  await new Promise((resolve, reject) => {
+  await new Promise((resolve, _reject) => {
     const socket = new WebSocket(`ws://${port.ipaddress}:${port.number}`);
 
     const timer = setTimeout(() => {
