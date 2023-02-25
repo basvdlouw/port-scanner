@@ -25,6 +25,15 @@
   </head>
   <body>
     <h1>Scanning ports from range</h1>
+    <p>
+      Ports with status OPEN are 100% open. Some applications that I have
+      detected with 100% accuracy so far: discord, battle.net.
+    </p>
+    <p>
+      Ports with status Likely open are potentially open, the algorithm can
+      easily be improved to be more accurate, a lot of false positives are
+      currently included.
+    </p>
     <div>
       <label class="col-sm-6 h3">Begin Port</label>
       <div class="col-sm-6">
@@ -52,7 +61,7 @@
     <div>
       <label class="col-sm-6 h3">Socket timeout in milliseconds</label>
       <div class="col-sm-6">
-        <input type="number" id="socketTimeout" value="10000" />
+        <input type="number" id="socketTimeout" value="200" />
       </div>
     </div>
     <button id="startPortScanner">Start Port Scanning</button>
@@ -63,12 +72,11 @@
         <tr>
           <th>Port number</th>
           <th>Port status</th>
-          <th>N of scans on port (Higher N = more reliable results)</th>
-          <th>Aggregated results of port scan N times</th>
-          <th>Aggregated results of port scan N times for closed port</th>
+          <th>N of scans on port</th>
+          <th>Average Scan time</th>
         </tr>
       </table>
     </div>
   </body>
-  <script type="module" src="./js/portscan.js"></script>
+  <script type="module" src="./js/main.js"></script>
 </html>

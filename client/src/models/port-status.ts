@@ -2,6 +2,7 @@ export enum PortStatus {
   UNKNOWN = "UNKNOWN",
   TIMEOUT = "TIMEOUT",
   OPEN = "OPEN",
+  LIKELY_OPEN = "LIKELY OPEN",
   CLOSE = "CLOSE",
   MESSAGE = "MESSAGE",
   ERROR = "ERROR"

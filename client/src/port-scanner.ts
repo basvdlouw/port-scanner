@@ -2,44 +2,7 @@ import { type Measurement } from "./models/measurement";
 import { type Port } from "./models/port";
 import { PortStatus } from "./models/port-status";
 import { type ScanResult } from "./models/scan-result";
-
-function getAverageDuration(measurements: Measurement[]): number {
-  const sum = measurements.reduce(
-    (total, measurement) => total + measurement.duration,
-    0
-  );
-  return sum / measurements.length;
-}
-
-function displayResults(
-  port: Port,
-  measurements: Measurement[],
-  numberOfScans: number
-): void {
-  if (port.status === PortStatus.OPEN) {
-    const el = document.getElementById("portScannerStatus");
-    const row = document.createElement("tr");
-    const x = row.insertCell(-1);
-    x.innerHTML = `${port.number}`;
-
-    const y = row.insertCell(-1);
-    y.innerHTML = `${port.status}`;
-
-    const n = row.insertCell(-1);
-    n.innerHTML = `${numberOfScans}`;
-
-    const open = row.insertCell(-1);
-    open.innerHTML = `Scan took ${getAverageDuration(
-      measurements
-    )} milliseconds on average`;
-
-    const closed = row.insertCell(-1);
-    // closed.innerHTML = `CLOSED PORT: ${closedPort.number} took: ${sumOfClosedPortTimings}`;
-    closed.innerHTML = `Not implemented`;
-
-    el?.appendChild(row);
-  }
-}
+import { displayResults } from "./utils";
 
 async function scanPort(port: Port, timeout: number): Promise<ScanResult> {
   const controller = new AbortController();
@@ -90,7 +53,7 @@ export async function analyzePort(
   port: Port,
   timeout: number,
   numberOfScans: number
-): Promise<Port> {
+): Promise<ScanResult[]> {
   const promises: Array<Promise<ScanResult>> = [];
 
   for (let i = 0; i < numberOfScans; i++) {
@@ -108,7 +71,8 @@ export async function analyzePort(
   } else {
     port.status = PortStatus.UNKNOWN;
   }
+
   displayResults(port, measurements, numberOfScans);
 
-  return port;
+  return results;
 }
