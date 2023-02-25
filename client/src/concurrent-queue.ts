@@ -1,7 +1,8 @@
-export class ConcurrentQueue<T> {
+export class ConcurrentQueue<T, E extends any[]> {
   private readonly queue: Array<{
     item: T;
-    taskFunction: (...args: any[]) => Promise<any>;
+    taskFunction: (...args: E) => Promise<any>;
+    args: E;
   }> = [];
 
   private runningCount: number = 0;
@@ -11,8 +12,12 @@ export class ConcurrentQueue<T> {
     this.maxConcurrency = maxConcurrency;
   }
 
-  enqueue(item: T, taskFunction: (...args: any[]) => Promise<any>): void {
-    this.queue.push({ item, taskFunction });
+  enqueue(
+    item: T,
+    taskFunction: (...args: E) => Promise<any>,
+    ...args: E
+  ): void {
+    this.queue.push({ item, taskFunction, args });
     this.dequeue();
   }
 
@@ -28,7 +33,7 @@ export class ConcurrentQueue<T> {
 
     this.runningCount++;
 
-    this.runTask(item.taskFunction)
+    this.runTask(item.taskFunction, ...item.args)
       .then(() => {
         this.runningCount--;
         this.dequeue();
@@ -40,8 +45,8 @@ export class ConcurrentQueue<T> {
   }
 
   private async runTask(
-    taskFunction: (...args: any[]) => Promise<any>,
-    ...args: any[]
+    taskFunction: (...args: E) => Promise<any>,
+    ...args: E
   ): Promise<void> {
     await taskFunction(...args);
   }

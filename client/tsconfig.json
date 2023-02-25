@@ -9,5 +9,6 @@
     "outDir": "../dist/public",
     "strict": true
   },
+  "exclude": ["node_modules"],
   "lib": ["ES2022"]
 }

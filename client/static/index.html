@@ -1,16 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+    </style>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Port Scanner</title>
   </head>
   <body>
     <h1>Scanning ports from range</h1>
-    <input type="number" id="startPort" name="From:" value="1" />
-    <input type="number" id="endPort" name="To:" value="65535" />
+    <div>
+      <label class="col-sm-6 h3">Begin Port</label>
+      <div class="col-sm-6">
+        <input type="number" id="startPort" value="1" />
+      </div>
+    </div>
+    <div>
+      <label class="col-sm-6 h3">End Port</label>
+      <div class="col-sm-6">
+        <input type="number" id="endPort" value="65535" />
+      </div>
+    </div>
+    <div>
+      <label class="col-sm-6 h3">Number of scans on port</label>
+      <div class="col-sm-6">
+        <input type="number" id="nScans" value="1" />
+      </div>
+    </div>
+    <div>
+      <label class="col-sm-6 h3">Number of parallel sockets</label>
+      <div class="col-sm-6">
+        <input type="number" id="nSockets" value="254" />
+      </div>
+    </div>
+
     <button id="startPortScanner">Start Port Scanning</button>
-    <div id="portScannerStatus"></div>
+    <button id="clearResults">Clear results in table</button>
+
+    <div>
+      <table id="portScannerStatus">
+        <tr>
+          <th>Port number</th>
+          <th>Port status</th>
+          <th>N of scans on port (Higher N = more reliable results)</th>
+          <th>Aggregated results of port scan N times</th>
+          <th>Aggregated results of port scan N times for closed port</th>
+        </tr>
+      </table>
+    </div>
   </body>
   <script type="module" src="./js/portscan.js"></script>
 </html>
