@@ -1,8 +1,8 @@
 import { ConcurrentQueue } from "./concurrent-queue";
 import { PortStatus } from "./models/port-status";
-import { PortScan } from "./port-scanner";
 import { type Port } from "./models/port";
 import { portRangeIsValid } from "./utils";
+import { analyzePort } from "./port-scanner";
 
 const localhost = "127.0.0.1";
 const maxConcurrency = 254;
@@ -29,7 +29,7 @@ button?.addEventListener("click", function handleClick(event) {
       status: PortStatus.UNKNOWN
     };
     queue.enqueue(port, async () => {
-      await PortScan.analyzePort(port, socketTimeout);
+      await analyzePort(port, socketTimeout);
     });
   }
 });
