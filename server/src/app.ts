@@ -6,7 +6,7 @@ const port = 3000;
 
 app.use(
   "/",
-  express.static(path.join(__dirname, "../public/static"), {
+  express.static(path.join(__dirname, "../public/"), {
     extensions: ["html"]
   })
 );

@@ -1,4 +1,4 @@
-import { type PortStatus } from "./port-status";
+import { type PortStatus } from "./port-status.js";
 
 export interface Port {
   ipaddress: string;

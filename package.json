@@ -4,7 +4,7 @@
   "description": "Website that scans local ports",
   "main": "src/app.js",
   "scripts": {
-    "copy": "copyfiles --up 1 ./client/static/**/*.* ./dist/public/",
+    "copy": "copyfiles --up 2 ./client/static/**/*.* ./dist/public/",
     "clean": "npx rimraf dist",
     "build-client": "npm run clean && npx tsc -p ./client/tsconfig.json && npm run copy",
     "build": "npm run build-client && npx tsc -p ./server/tsconfig.json",
