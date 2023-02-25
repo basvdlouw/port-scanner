@@ -1,7 +1,5 @@
-import { type Port } from "./port";
-
 export interface Measurement {
-  port: Port;
   duration: number;
+  receivedData: boolean;
   timedOut: boolean;
 }
