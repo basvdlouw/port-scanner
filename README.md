@@ -1,6 +1,6 @@
-![GitHub Pages Deployment](https://github.com/Basvdlouw/actions/workflows/jekyll-gh-pages.yml/badge.svg)
+[![GitHub Pages Deployment](https://github.com/Basvdlouw/port-scanner/actions/workflows/jekyll-gh-pages.yml/badge.svg)](https://github.com/Basvdlouw/port-scanner/actions/workflows/jekyll-gh-pages.yml)
 
-![Port Scanner](https://basvdlouw.github.io/port-scanner/)
+[Port Scanner](https://basvdlouw.github.io/port-scanner/)
 
 
 # Project structure
