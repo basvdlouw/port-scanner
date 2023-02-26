@@ -28,3 +28,10 @@ npm start
 ```
 
 Builds and serves the application on `http://localhost:3000`.
+
+# Detected applications so far
+
+- Discord
+- Battle.net
+- Steam
+- Selenium
