@@ -1,3 +1,8 @@
+![GitHub Pages Deployment](https://github.com/Basvdlouw/actions/workflows/jekyll-gh-pages.yml/badge.svg)
+
+![Port Scanner](https://basvdlouw.github.io/port-scanner/)
+
+
 # Project structure
 
 - Project uses npm to manage packages
