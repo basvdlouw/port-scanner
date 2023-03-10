@@ -24,7 +24,7 @@ function Get-OpenPorts {
     return $mappedPorts
 }
 
-Write-Host "Retrieving current open ports via netstat..."
+Write-Host "Retrieving current open ports before opening application..."
 
 $currentOpenPorts = Get-OpenPorts
 Read-Host -Prompt "Press any key to continue when application has been opened"
@@ -46,7 +46,7 @@ else {
         }
         else {
             Write-Host "Port changed state:" -ForegroundColor Yellow
-            Write-Host "Protocol: $($port.Protocol), Local Address: $($port.LocalAddress), Local Port: $($port.LocalPort), State: $($port.State), PID: $($port.PID), Process Name: $($port.ProcessName)" -ForegroundColor Green
+            Write-Host "Protocol: $($port.Protocol), Local Address: $($port.LocalAddress), Local Port: $($port.LocalPort), State: $($port.State), PID: $($port.PID), Process Name: $($port.ProcessName)" -ForegroundColor Yellow
         }
     }
 }
