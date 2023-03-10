@@ -53,7 +53,7 @@ startPortScanner?.addEventListener("click", function handleClick(event) {
     .waitForCompletion()
     .then(() => {
       // post scan analysis
-      analyzePostScanResults(resultsStore);
+      analyzePostScanResults(resultsStore, socketTimeout);
     })
     .catch((error) => {
       console.error(error);
@@ -68,7 +68,8 @@ clearResults?.addEventListener("click", function handleClick(event): void {
 });
 
 function analyzePostScanResults(
-  resultsStore: ResultsStore<ScanResult[]>
+  resultsStore: ResultsStore<ScanResult[]>,
+  timeout: number
 ): void {
   console.log("Starting post scan analysis");
 
@@ -92,8 +93,8 @@ function analyzePostScanResults(
 
   const deviantScanResults = getScanResultsBelowThresholdDuration(
     resultsStore,
-    averageScanDuration,
-    0.5
+    timeout,
+    1.0
   );
 
   for (const result of deviantScanResults) {
@@ -108,7 +109,7 @@ function analyzePostScanResults(
 // testing if this is viable (does not take into account throtteling/killed connections... however... fairly reliable results so far... )
 function getScanResultsBelowThresholdDuration(
   resultsStore: ResultsStore<ScanResult[]>,
-  averageDuration: number,
+  timeout: number,
   threshold: number
 ): ScanResult[] {
   const likelyOpenPorts: ScanResult[] = [];
@@ -117,10 +118,10 @@ function getScanResultsBelowThresholdDuration(
   resultsStore.getResults().forEach((results) => {
     results.forEach((result) => {
       if (
-        result.measurement.duration < averageDuration * (1 - threshold) &&
+        result.measurement.duration < timeout * threshold &&
         !uniquePorts.has(result.port.number) &&
         result.port.status !== PortStatus.OPEN &&
-        result.port.number > 1024
+        result.port.number > 1024 // Should remove restricted/unsafe ports instead of first 1024. Not all well known ports are restricted and some ports after 1024 are restricted.
       ) {
         result.port.status = PortStatus.LIKELY_OPEN;
         likelyOpenPorts.push(result);

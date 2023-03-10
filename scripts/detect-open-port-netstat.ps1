@@ -40,7 +40,7 @@ if ($null -eq $results) {
 }
 else {
     foreach ($port in $results) {
-        if ($port.Protocol -eq 'TCP' -and $port.State -eq 'Listen') {
+        if ($port.Protocol -eq 'TCP' -and ($port.State -eq 'Listen' -or $port.State -eq 'Established')) {
             Write-Host "Port was opened:" -ForegroundColor Green
             Write-Host "Protocol: $($port.Protocol), Local Address: $($port.LocalAddress), Local Port: $($port.LocalPort), State: $($port.State), PID: $($port.PID), Process Name: $($port.ProcessName)" -ForegroundColor Green
         }
@@ -48,5 +48,22 @@ else {
             Write-Host "Port changed state:" -ForegroundColor Yellow
             Write-Host "Protocol: $($port.Protocol), Local Address: $($port.LocalAddress), Local Port: $($port.LocalPort), State: $($port.State), PID: $($port.PID), Process Name: $($port.ProcessName)" -ForegroundColor Yellow
         }
+    }
+}
+
+
+$filter = Read-Host -Prompt "Provide process name to filter results"
+
+foreach ($port in $results) {
+    if($port.ProcessName -ne $filter) {
+        continue
+    }
+    if ($port.Protocol -eq 'TCP' -and ($port.State -eq 'Listen' -or $port.State -eq 'Established')) {
+        Write-Host "Port was opened:" -ForegroundColor Green
+        Write-Host "Protocol: $($port.Protocol), Local Address: $($port.LocalAddress), Local Port: $($port.LocalPort), State: $($port.State), PID: $($port.PID), Process Name: $($port.ProcessName)" -ForegroundColor Green
+    }
+    else {
+        Write-Host "Port changed state:" -ForegroundColor Yellow
+        Write-Host "Protocol: $($port.Protocol), Local Address: $($port.LocalAddress), Local Port: $($port.LocalPort), State: $($port.State), PID: $($port.PID), Process Name: $($port.ProcessName)" -ForegroundColor Yellow
     }
 }
