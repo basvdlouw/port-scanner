@@ -19,26 +19,25 @@ async function scanPort(port: Port, timeout: number): Promise<ScanResult> {
 
   const options: RequestInit = { mode: "no-cors", signal: controller.signal };
 
-  let end = 0;
+  const end = 0;
   let receivedData = false;
   const timedOut = false;
 
   const start = performance.now();
 
-  fetch(`http://${port.ipaddress}:${port.number}`, options)
-    .then((response) => {
-      console.log(`PORT: ${port} had response: ${response}`);
-      end = performance.now() - start;
-      receivedData = true;
-      port.status = PortStatus.OPEN;
-    })
-    .catch((error) => {
-      console.log(`PORT: ${port} had error: ${error}`);
-      end = performance.now() - start;
-    })
-    .finally(() => {
-      clearTimeout(timeoutReference);
-    });
+  try {
+    const response = await fetch(
+      `http://${port.ipaddress}:${port.number}`,
+      options
+    );
+    console.log(`PORT: ${port} had response: ${response}`);
+    receivedData = true;
+    port.status = PortStatus.OPEN;
+  } catch (error) {
+    console.log(`PORT: ${port} had error: ${error}`);
+  } finally {
+    clearTimeout(timeoutReference);
+  }
 
   const measurement: Measurement = {
     duration: end,
