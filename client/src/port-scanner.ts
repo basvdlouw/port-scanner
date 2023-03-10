@@ -27,13 +27,13 @@ async function scanPort(port: Port, timeout: number): Promise<ScanResult> {
 
   fetch(`http://${port.ipaddress}:${port.number}`, options)
     .then((response) => {
-      console.log(response);
+      console.log(`PORT: ${port} had response: ${response}`);
       end = performance.now() - start;
       receivedData = true;
       port.status = PortStatus.OPEN;
     })
     .catch((error) => {
-      console.error(error);
+      console.log(`PORT: ${port} had error: ${error}`);
       end = performance.now() - start;
     })
     .finally(() => {
