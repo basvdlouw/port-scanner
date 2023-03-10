@@ -24,7 +24,9 @@ async function scanPort(port: Port, timeout: number): Promise<ScanResult> {
       `http://${port.ipaddress}:${port.number}`,
       options
     );
-    console.log(`PORT: ${port.number} had response: ${response}`);
+    console.log(
+      `PORT: ${port.number} had response status: ${response.status} with text: ${response.text}`
+    );
     end = performance.now() - start;
     receivedData = true;
     port.status = PortStatus.OPEN;

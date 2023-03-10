@@ -44,8 +44,8 @@ export class ConcurrentQueue<T, E extends any[]> {
 
     this.runTask(item.taskFunction, ...item.args)
       .then((result) => {
-        console.log(`pending tasks: ${this.pendingTasks}`);
-        console.log(`completed tasks: ${this.completedCount}`);
+        // console.log(`pending tasks: ${this.pendingTasks}`);
+        // console.log(`completed tasks: ${this.completedCount}`);
         this.resultsStore.push(result);
         this.completedCount++;
         this.pendingTasks--;
@@ -59,8 +59,8 @@ export class ConcurrentQueue<T, E extends any[]> {
         }
       })
       .catch((_error) => {
-        console.log(`pending tasks: ${this.pendingTasks}`);
-        console.log(`completed tasks: ${this.completedCount}`);
+        // console.log(`pending tasks: ${this.pendingTasks}`);
+        // console.log(`completed tasks: ${this.completedCount}`);
         this.completedCount++;
         this.pendingTasks--;
         this.runningCount--;
