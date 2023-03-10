@@ -1,8 +1,8 @@
-import { type Measurement } from "./models/measurement.js";
-import { type Port } from "./models/port.js";
-import { PortStatus } from "./models/port-status.js";
-import { type ScanResult } from "./models/scan-result.js";
-import { displayResults } from "./utils.js";
+import { type Measurement } from "./models/measurement";
+import { type Port } from "./models/port";
+import { PortStatus } from "./models/port-status";
+import { type ScanResult } from "./models/scan-result";
+import { displayResults } from "./utils";
 
 async function scanPort(port: Port, timeout: number): Promise<ScanResult> {
   const controller = new AbortController();
@@ -19,7 +19,7 @@ async function scanPort(port: Port, timeout: number): Promise<ScanResult> {
 
   const options: RequestInit = { mode: "no-cors", signal: controller.signal };
 
-  const end = 0;
+  let end: number;
   let receivedData = false;
   const timedOut = false;
 
@@ -31,10 +31,12 @@ async function scanPort(port: Port, timeout: number): Promise<ScanResult> {
       options
     );
     console.log(`PORT: ${port} had response: ${response}`);
+    end = performance.now() - start;
     receivedData = true;
     port.status = PortStatus.OPEN;
   } catch (error) {
     console.log(`PORT: ${port} had error: ${error}`);
+    end = performance.now() - start;
   } finally {
     clearTimeout(timeoutReference);
   }
