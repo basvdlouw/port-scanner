@@ -34,9 +34,7 @@ npm start
 
 Builds and serves the application on `http://localhost:3000`.
 
-# Detected applications so far
 
-- Discord
-- Battle.net
-- Steam
-- Selenium
+# Initial results
+
+Several applications detected using Windows 11 and Chrome 111. Application is not tested/optimized for other configurations.
