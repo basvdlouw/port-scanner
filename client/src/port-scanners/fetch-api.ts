@@ -31,7 +31,14 @@ export const fetchApiScan: PortScanner = async (
     receivedData = true;
     port.status = PortStatus.OPEN;
     console.log(
-      `PORT: ${port.number} had response status: ${response.status} with text: ${response.text}. Scan took: ${end} ms`
+      // Because of no-cors mode we cannot view response details, but it makes detection of open HTTP ports a lot easier
+      `PORT: ${port.number} received response with status: ${
+        response.status
+      }, status text: ${
+        response.statusText
+      }, text: ${await response.text()}, headers: ${JSON.stringify(
+        response.headers
+      )}`
     );
   } catch (error) {
     end = performance.now() - start;

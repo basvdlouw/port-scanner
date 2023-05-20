@@ -3,6 +3,7 @@ import { Port } from "../models/port.js";
 import { PortScanner } from "../models/port-scanner.js";
 import { PortStatus } from "../models/port-status.js";
 import { ScanResult } from "../models/scan-result.js";
+import e from "cors";
 
 export const websocketScan: PortScanner = async (
   port: Port,
@@ -46,18 +47,15 @@ function connectToWebsocket(port: Port, socket: WebSocket): Promise<Port> {
       port.status = PortStatus.OPEN;
       resolve(port);
     };
-    socket.onerror = function (err) {
-      console.log(
-        `WebSocket connection received error: ${err} on port ${port.number} with code`
-      );
+    socket.onerror = function (err: Event) {
+      console.log(`WebSocket connection received error on port ${port.number}`);
       port.status = PortStatus.ERROR;
       resolve(port);
     };
-    socket.onclose = (event) => {
+    socket.onclose = (event: CloseEvent) => {
       port.status = PortStatus.CLOSE;
       console.log(
-        `WebSocket connection closed on port ${port.number} with code`,
-        event.code
+        `WebSocket connection closed on port ${port.number} with data: event code: ${event.code}, event reason: ${event.reason}}}`
       );
       resolve(port);
     };

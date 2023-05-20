@@ -19,8 +19,6 @@ app.listen(port, () => {
   console.log(`Express is listening at http://localhost:${port}`);
 });
 
-app.use(cors({ origin: "*" }));
-
 const server = http.createServer(app);
 
 startWebSocketServer(server);
