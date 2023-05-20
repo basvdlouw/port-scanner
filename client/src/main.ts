@@ -9,6 +9,7 @@ import { analyzePostScanResults } from "./post-scan-analysis.js";
 import { fetchApiScan } from "./port-scanners/fetch-api.js";
 import { websocketScan } from "./port-scanners/websocket-api.js";
 import { PortScanner } from "./models/port-scanner.js";
+import { webRtcScan } from "./port-scanners/webrtc-api.js";
 
 const localhost = "127.0.0.1";
 const startPortScanner = document.getElementById("startPortScanner");
@@ -40,6 +41,9 @@ startPortScanner?.addEventListener("click", function handleClick() {
   }
   if (chosenScanningTechnique == "websocket") {
     scanningTechnique = websocketScan;
+  }
+  if (chosenScanningTechnique == "webrtc") {
+    scanningTechnique = webRtcScan;
   }
 
   if (!portRangeIsValid(beginRange, endRange)) {
