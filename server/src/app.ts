@@ -25,6 +25,6 @@ const server = http.createServer(app);
 
 startWebSocketServer(server);
 
-server.listen(process.env.WEBRTCPORT || 8080, () => {
+server.listen(process.env.WEBRTCPORT || 5757, () => {
   console.log("WebRTC Server started");
 });

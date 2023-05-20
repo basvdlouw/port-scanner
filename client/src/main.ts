@@ -6,6 +6,9 @@ import { analyzePort } from "./port-scanner.js";
 import { ResultsStore } from "./results-store.js";
 import { ScanResult } from "./models/scan-result.js";
 import { analyzePostScanResults } from "./post-scan-analysis.js";
+import { fetchApiScan } from "./port-scanners/fetch-api.js";
+import { websocketScan } from "./port-scanners/websocket-api.js";
+import { PortScanner } from "./models/port-scanner.js";
 
 const localhost = "127.0.0.1";
 const startPortScanner = document.getElementById("startPortScanner");
@@ -29,7 +32,15 @@ startPortScanner?.addEventListener("click", function handleClick() {
     (document.getElementById("socketTimeout") as HTMLInputElement).value
   );
 
-  getScanningTechnique();
+  const chosenScanningTechnique = getScanningTechnique();
+  let scanningTechnique: PortScanner;
+
+  if (chosenScanningTechnique == "fetch") {
+    scanningTechnique = fetchApiScan;
+  }
+  if (chosenScanningTechnique == "websocket") {
+    scanningTechnique = websocketScan;
+  }
 
   if (!portRangeIsValid(beginRange, endRange)) {
     throw new Error("Invalid port range");
@@ -45,7 +56,14 @@ startPortScanner?.addEventListener("click", function handleClick() {
       number: i,
       status: PortStatus.UNKNOWN
     };
-    queue.enqueue(port, analyzePort, port, socketTimeout, nScans);
+    queue.enqueue(
+      port,
+      analyzePort,
+      port,
+      socketTimeout,
+      nScans,
+      scanningTechnique!
+    );
   }
 
   queue
@@ -66,8 +84,9 @@ clearResults?.addEventListener("click", function handleClick(): void {
   }
 });
 
-function getScanningTechnique(): void {
-  const beginRange = document.getElementById("scantechnique");
-
-  console.log(beginRange);
+function getScanningTechnique(): string {
+  const chosenTechnique = document.getElementById(
+    "scantechnique"
+  ) as HTMLSelectElement;
+  return chosenTechnique.options[chosenTechnique.selectedIndex].value;
 }
