@@ -14,7 +14,10 @@ export const fetchApiScan: PortScanner = async (
     port.status = PortStatus.TIMEOUT;
   }, timeout);
 
-  const options: RequestInit = { mode: "no-cors", signal: controller.signal };
+  const options: RequestInit = {
+    mode: "no-cors",
+    signal: controller.signal
+  };
 
   let end: number;
   let receivedData = false;
