@@ -23,7 +23,7 @@ export function displayResults(
     const el = document.getElementById("portScannerStatus");
     const row = document.createElement("tr");
     const x = row.insertCell(-1);
-    x.innerHTML = `${port.number}`;
+    x.innerHTML = `${port.ipaddress}:${port.number}`;
 
     const y = row.insertCell(-1);
     y.innerHTML = `${port.status}`;
