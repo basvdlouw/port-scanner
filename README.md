@@ -2,6 +2,9 @@
 
 [Port Scanner](https://basvdlouw.github.io/port-scanner/)
 
+# Port Scanner
+
+Application for performing browser-based port scanning using different JavaScript APIs
 
 # Project structure
 
