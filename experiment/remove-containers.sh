@@ -1,0 +1,1 @@
+docker ps -a --filter "name=win-container" -q | xargs docker rm -f
