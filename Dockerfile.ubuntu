@@ -1,0 +1,27 @@
+ARG BASE_IMAGE="ubuntu:22.04"
+FROM $BASE_IMAGE
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update
+# RUN apt upgrade -y
+
+# Install desktop version to simulate "real" installation
+RUN apt-get install -y curl 
+RUN curl -sL https://deb.nodesource.com/setup_18.x -o nodesource_setup.sh
+RUN bash nodesource_setup.sh
+RUN apt-get install -y ubuntu-desktop 
+RUN apt-get install -y nodejs
+
+# Configure experiment to artificially open ports
+COPY ./artificial-ports-server /app/artificial-ports-server
+COPY ./node_modules /app/public/node_modules
+COPY ./dist /app/public
+
+
+ENV BEGIN_PORT=10000
+ENV END_PORT=10030
+
+COPY /scripts/start.sh /app/start.sh
+
+CMD ["/app/start.sh"]
