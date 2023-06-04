@@ -10,7 +10,7 @@
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module",
-    "project": ["./server/tsconfig.json", "./client/tsconfig.json"]
+    "project": ["./server/tsconfig.json", "./client/tsconfig.json", "./experiment/server/tsconfig.json"]
   },
   "rules": {}
 }
