@@ -1,7 +1,6 @@
 import express from "express";
 import path from "path";
 import * as http from "http";
-import cors from "cors";
 import { startWebSocketServer } from "./webrtc/socket";
 
 const app = express();
@@ -24,5 +23,5 @@ const server = http.createServer(app);
 startWebSocketServer(server);
 
 server.listen(process.env.WEBRTCPORT || 5757, () => {
-  console.log("WebRTC Server started");
+  console.log("WebSocket Server started");
 });

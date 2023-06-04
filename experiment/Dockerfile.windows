@@ -1,12 +1,13 @@
 ARG BASE_IMAGE="mcr.microsoft.com/windows:20H2-amd64"
 
 FROM $BASE_IMAGE
-RUN md "C:\\netcat"
-RUN curl -Lo "C:\\netcat\nc.exe" "https://gitlab.com/kalilinux/packages/windows-binaries/-/raw/kali/master/nc.exe"
+# RUN md "C:\\netcat"
+# RUN curl -Lo "C:\\netcat\nc.exe" "https://gitlab.com/kalilinux/packages/windows-binaries/-/raw/kali/master/nc.exe"
+RUN choco install git
+
 
 ENV BEGIN_PORT=10000
 ENV END_PORT=10030
 
-ENTRYPOINT powershell "for ([int]$port = $env:BEGIN_PORT; $port -le $env:END_PORT; $port++) { echo $port; Start-Process -FilePath 'C:\netcat\nc.exe' -ArgumentList '-L', '-d', '-p', "$port" -WindowStyle Hidden }"
-
+# ENTRYPOINT powershell "for ([int]$port = $env:BEGIN_PORT; $port -le $env:END_PORT; $port++) { Start-Process -FilePath 'C:\netcat\nc.exe' -ArgumentList '-L', '-d', '-p', "$port" -WindowStyle Hidden }"
 CMD cmd /c ping -t localhost
