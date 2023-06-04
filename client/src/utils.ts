@@ -62,3 +62,20 @@ export function sortTableByPortNumber() {
 
   rows.forEach((row) => table.appendChild(row));
 }
+
+interface QueryParameters {
+  [key: string]: string | null;
+}
+
+export function getQueryParameters(queryParameter: string) {
+  const searchParams = new URLSearchParams(window.location.search);
+
+  const queryParameters: QueryParameters = new Proxy<QueryParameters>(
+    {},
+    {
+      get: (target, prop) => searchParams.get(prop.toString())
+    }
+  );
+
+  return queryParameters.some_key;
+}

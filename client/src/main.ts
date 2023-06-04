@@ -1,7 +1,7 @@
 import { ConcurrentQueue } from "./concurrent-queue.js";
 import { PortStatus } from "./models/port-status.js";
 import { type Port } from "./models/port.js";
-import { portRangeIsValid } from "./utils.js";
+import { getQueryParameters, portRangeIsValid } from "./utils.js";
 import { analyzePort } from "./port-scanner.js";
 import { ResultsStore } from "./results-store.js";
 import { ScanResult } from "./models/scan-result.js";
@@ -11,6 +11,9 @@ import { websocketScan } from "./port-scanners/websocket-api.js";
 import { PortScanner } from "./models/port-scanner.js";
 import { webRtcScan } from "./port-scanners/webrtc-api.js";
 import { xhrApiScan } from "./port-scanners/xhr-api.js";
+
+console.log(getQueryParameters("begin_port"));
+console.log(getQueryParameters("end_port"));
 
 const localhost = "127.0.0.1";
 const startPortScanner = document.getElementById("startPortScanner");
