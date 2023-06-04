@@ -1,59 +1,31 @@
 import { ConcurrentQueue } from "./concurrent-queue.js";
 import { PortStatus } from "./models/port-status.js";
 import { type Port } from "./models/port.js";
-import { getQueryParameters, portRangeIsValid } from "./utils.js";
+import { getQueryParameter, getScanAPI, portRangeIsValid } from "./utils.js";
 import { analyzePort } from "./port-scanner.js";
 import { ResultsStore } from "./results-store.js";
 import { ScanResult } from "./models/scan-result.js";
 import { analyzePostScanResults } from "./post-scan-analysis.js";
-import { fetchApiScan } from "./port-scanners/fetch-api.js";
-import { websocketScan } from "./port-scanners/websocket-api.js";
-import { PortScanner } from "./models/port-scanner.js";
-import { webRtcScan } from "./port-scanners/webrtc-api.js";
-import { xhrApiScan } from "./port-scanners/xhr-api.js";
 
-console.log(getQueryParameters("begin_port"));
-console.log(getQueryParameters("end_port"));
+const beginPort = parseInt(getQueryParameter("begin_port"));
+const endPort = parseInt(getQueryParameter("end_port"));
+const nScans = parseInt(getQueryParameter("n_scans"));
+const nSockets = parseInt(getQueryParameter("n_sockets"));
+const socketTimeout = parseInt(getQueryParameter("socket_timeout"));
+const scanningTechnique = getQueryParameter("scanning_technique");
+
+console.log(`Begin port: ${beginPort}`);
+console.log(`End port: ${endPort}`);
+console.log(`Number of scans per port: ${nScans}`);
+console.log(`Number of parallel sockets: ${nSockets}`);
+console.log(`Socket timeout in ms: ${socketTimeout}`);
+console.log(`Scanning technique: ${scanningTechnique}`);
 
 const localhost = "127.0.0.1";
+
 const startPortScanner = document.getElementById("startPortScanner");
-const clearResults = document.getElementById("clearResults");
-const table = document.getElementById("portScannerStatus") as HTMLTableElement;
-
 startPortScanner?.addEventListener("click", function handleClick() {
-  const beginRange = parseInt(
-    (document.getElementById("startPort") as HTMLInputElement).value
-  );
-  const endRange = parseInt(
-    (document.getElementById("endPort") as HTMLInputElement).value
-  );
-  const nScans = parseInt(
-    (document.getElementById("nScans") as HTMLInputElement).value
-  );
-  const nSockets = parseInt(
-    (document.getElementById("nSockets") as HTMLInputElement).value
-  );
-  const socketTimeout = parseInt(
-    (document.getElementById("socketTimeout") as HTMLInputElement).value
-  );
-
-  const chosenScanningTechnique = getScanningTechnique();
-  let scanningTechnique: PortScanner;
-
-  if (chosenScanningTechnique == "fetch") {
-    scanningTechnique = fetchApiScan;
-  }
-  if (chosenScanningTechnique == "websocket") {
-    scanningTechnique = websocketScan;
-  }
-  if (chosenScanningTechnique == "webrtc") {
-    scanningTechnique = webRtcScan; // does not work
-  }
-  if (chosenScanningTechnique == "xhr") {
-    scanningTechnique = xhrApiScan;
-  }
-
-  if (!portRangeIsValid(beginRange, endRange)) {
+  if (!portRangeIsValid(beginPort, endPort)) {
     throw new Error("Invalid port range");
   }
 
@@ -61,7 +33,7 @@ startPortScanner?.addEventListener("click", function handleClick() {
   const queue = new ConcurrentQueue(nSockets / nScans, resultsStore);
 
   // scan
-  for (let i = beginRange; i <= endRange; i++) {
+  for (let i = beginPort; i <= endPort; i++) {
     const port: Port = {
       ipaddress: localhost,
       number: i,
@@ -73,7 +45,7 @@ startPortScanner?.addEventListener("click", function handleClick() {
       port,
       socketTimeout,
       nScans,
-      scanningTechnique!
+      getScanAPI(scanningTechnique)
     );
   }
 
@@ -87,17 +59,3 @@ startPortScanner?.addEventListener("click", function handleClick() {
       console.error(error);
     });
 });
-
-clearResults?.addEventListener("click", function handleClick(): void {
-  const rowCount = table.rows.length;
-  for (let i = rowCount - 1; i > 0; i--) {
-    table.deleteRow(i);
-  }
-});
-
-function getScanningTechnique(): string {
-  const chosenTechnique = document.getElementById(
-    "scantechnique"
-  ) as HTMLSelectElement;
-  return chosenTechnique.options[chosenTechnique.selectedIndex].value;
-}

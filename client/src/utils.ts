@@ -1,6 +1,11 @@
 import { Measurement } from "./models/measurement.js";
 import { Port } from "./models/port.js";
 import { PortStatus } from "./models/port-status.js";
+import { fetchApiScan } from "./port-scanners/fetch-api.js";
+import { websocketScan } from "./port-scanners/websocket-api.js";
+import { webRtcScan } from "./port-scanners/webrtc-api.js";
+import { xhrApiScan } from "./port-scanners/xhr-api.js";
+import { PortScanner } from "./models/port-scanner.js";
 
 export function portRangeIsValid(start: number, end: number): boolean {
   if (start <= 0 || end >= 65536 || start > end) return false;
@@ -67,15 +72,34 @@ interface QueryParameters {
   [key: string]: string | null;
 }
 
-export function getQueryParameters(queryParameter: string) {
-  const searchParams = new URLSearchParams(window.location.search);
+export function getQueryParameter(queryParameter: string): string {
+  const params = new URLSearchParams(window.location.search);
+  const value = params.get(queryParameter);
+  if (value == null) {
+    throw `Query parameter: ${queryParameter} is null`;
+  }
+  return value;
+}
 
-  const queryParameters: QueryParameters = new Proxy<QueryParameters>(
-    {},
-    {
-      get: (target, prop) => searchParams.get(prop.toString())
-    }
-  );
+export function getScanAPI(scanningTechnique: string): PortScanner {
+  let scanningAPI;
 
-  return queryParameters.some_key;
+  switch (scanningTechnique) {
+    case "fetch":
+      scanningAPI = fetchApiScan;
+      break;
+    case "websocket":
+      scanningAPI = websocketScan;
+      break;
+    case "xhr":
+      scanningAPI = xhrApiScan;
+      break;
+    // case "webrtc":
+    //   scanningAPI = webRtcScan;
+    //   break;
+    default:
+      throw `Scanning API: ${scanningTechnique} not supported`;
+  }
+
+  return scanningAPI;
 }
