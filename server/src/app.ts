@@ -2,6 +2,8 @@ import express from "express";
 import path from "path";
 import * as http from "http";
 import { startWebSocketServer } from "./webrtc/socket";
+import { ScanResult } from "./models/scan-result";
+import { writeFile } from "fs/promises";
 
 const app = express();
 const port = 3000;
@@ -12,10 +14,31 @@ app.use(
     extensions: ["html"]
   })
 );
+app.use(express.json({ limit: "100mb" }));
 app.use("/js", express.static(path.join(__dirname, "../public/")));
 
 app.listen(port, () => {
   console.log(`Express is listening at http://localhost:${port}`);
+});
+
+app.post("/scanresults", async (req, res) => {
+  const scanResults: ScanResult[][] = req.body;
+  console.log("scanresults:", scanResults);
+  const filePath = "scan-results.json";
+
+  try {
+    if (!scanResults) {
+      throw new Error("Scan results are missing in the request body");
+    }
+
+    await writeFile(filePath, JSON.stringify(scanResults, null, 2));
+
+    console.log("Scan results saved successfully");
+    res.json({ message: "Scan results received and saved successfully" });
+  } catch (err) {
+    console.error("Error writing scan results to file:", err);
+    res.status(500).json({ error: "Failed to save scan results" });
+  }
 });
 
 const server = http.createServer(app);

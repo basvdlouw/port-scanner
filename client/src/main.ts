@@ -51,9 +51,26 @@ startPortScanner?.addEventListener("click", function handleClick() {
 
   queue
     .waitForCompletion()
-    .then(() => {
+    .then(async () => {
       // post scan analysis
-      analyzePostScanResults(resultsStore, socketTimeout);
+      // analyzePostScanResults(resultsStore, socketTimeout);
+      try {
+        const results = resultsStore.getResults();
+        const response = await fetch("http://localhost:3000/scanresults", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(results)
+        });
+
+        const data = await response.json();
+        console.log(data.message);
+
+        document.getElementById("finished")?.classList.remove("hidden");
+      } catch (error) {
+        console.error("Error:", error);
+      }
     })
     .catch((error) => {
       console.error(error);

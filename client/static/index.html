@@ -2,12 +2,14 @@
 <html lang="en">
   <head>
     <style>
+      .hidden {
+        display: none;
+      }
       table {
         font-family: arial, sans-serif;
         border-collapse: collapse;
         width: 100%;
       }
-
       td,
       th {
         border: 1px solid #dddddd;
@@ -25,7 +27,6 @@
   </head>
   <body>
     <button id="startPortScanner">Start Port Scanning</button>
-
     <div>
       <table id="portScannerStatus">
         <tr>
@@ -37,6 +38,7 @@
         </tr>
       </table>
     </div>
+    <h1 id="finished" class="hidden">Finished port scanning</h1>
   </body>
   <script type="module" src="./main.js"></script>
 </html>
