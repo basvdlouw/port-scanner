@@ -10,9 +10,12 @@ import java.time.Duration;
 
 public class Main {
     public static void main(String[] args) {
-        WebDriverManager.chromedriver().setup();
+//        WebDriverManager.chromedriver().setup();
+//        System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");
+
+        // Create a new instance of the Chrome driver
         final ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--remote-allow-origins=*");
+        chromeOptions.addArguments("--remote-allow-origins=*", "--ignore-ssl-errors=yes", "--ignore-certificate-errors");
         final WebDriver driver = new ChromeDriver(chromeOptions);
 
         try {
