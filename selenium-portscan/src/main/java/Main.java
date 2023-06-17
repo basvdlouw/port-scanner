@@ -14,8 +14,14 @@ import java.util.logging.Level;
 
 public class Main {
     public static void main(String[] args) {
-//        WebDriverManager.chromedriver().setup();
-//        System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");
+        final String beginPort = args[0];
+        final String endPort = args[1];
+        final String nScans = args[2];
+        final String nSockets = args[3];
+        final String socketTimeout = args[4];
+        final String scanningTechnique = args[5];
+        System.out.printf("beginPort: %s, endPort: %s, nScans: %s, nSockets: %s, socketTimeout: %s, scanningTechnique: %s%n",
+                beginPort, endPort, nScans, nSockets, socketTimeout, scanningTechnique);
         System.out.println("Setting up selenium port scanner");
         System.setProperty("webdriver.chrome.logfile", "/home/chromedriver.log");
         System.setProperty("webdriver.chrome.verboseLogging", "true");
@@ -25,9 +31,11 @@ public class Main {
         chromeOptions.addArguments("--headless", "--remote-allow-origins=*", "--ignore-ssl-errors=yes", "--ignore-certificate-errors");
         final WebDriver driver = new ChromeDriver(chromeOptions);
 
+
         try {
             System.out.println("Starting port scanner");
-            driver.get("http://localhost:3001/?begin_port=1&end_port=65536&n_scans=1&n_sockets=200&socket_timeout=300&scanning_technique=fetch");
+            driver.get(String.format("http://localhost:3001/?begin_port=%s&end_port=%s&n_scans=%s&n_sockets=%s&socket_timeout=%s&scanning_technique=%s",
+                    beginPort, endPort, nScans, nSockets, socketTimeout, scanningTechnique));
             driver.findElement(By.id("startPortScanner")).click();
             final WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(10));
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("finished")));

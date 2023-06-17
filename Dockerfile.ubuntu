@@ -1,4 +1,5 @@
 ARG BASE_IMAGE="ubuntu:22.04"
+
 FROM $BASE_IMAGE
 
 ENV DEBIAN_FRONTEND=noninteractive
@@ -25,9 +26,6 @@ COPY ./artificial-ports-server /app/artificial-ports-server
 COPY ./node_modules /app/public/node_modules
 COPY ./dist /app/public
 COPY ./selenium-portscan/target/selenium-portscan-1.0.0-jar-with-dependencies.jar /app/selenium-portscan.jar
-
-ENV BEGIN_PORT=10000
-ENV END_PORT=10030
 
 COPY /scripts/start.sh /app/start.sh
 

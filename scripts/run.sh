@@ -1,4 +1,17 @@
-# docker run -e BEGIN_PORT=10005 -e END_PORT=10300 --detach --name win-container windows-experiment
-docker run -e BEGIN_PORT=10000 -e END_PORT=10030 --privileged=true --security-opt seccomp=scripts/settings.json --detach -t --name ubuntu-container ubuntu-experiment
-# docker exec -it win-container cmd
-docker exec -it ubuntu-container bash
+BEGIN_PORT=$1
+END_PORT=$2
+SCANNING_TECHNIQUE=$3
+N_SCANS=$4
+PARALLEL_SOCKETS=$5
+SOCKET_TIMEOUT=$6
+
+docker run -e BEGIN_PORT=$1 \
+           -e END_PORT=$2 \
+           -e SCANNING_TECHNIQUE=$3 \
+           -e N_SCANS=$4 \
+           -e PARALLEL_SOCKETS=$5 \
+           -e SOCKET_TIMEOUT=$6 \
+           --privileged=true \
+           --security-opt seccomp=scripts/settings.json \
+           --detach -t --name ubuntu-container \
+           ubuntu-experiment

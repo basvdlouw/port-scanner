@@ -47,6 +47,7 @@ export const fetchApiScan: PortScanner = async (
     );
   } catch (error) {
     end = performance.now() - start;
+    endScan = new Date();
     console.log(
       `PORT: ${port.number} had error: ${error}. Scan took: ${end} ms`
     );
