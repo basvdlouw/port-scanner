@@ -5,7 +5,6 @@ import { getQueryParameter, getScanAPI, portRangeIsValid } from "./utils.js";
 import { analyzePort } from "./port-scanner.js";
 import { ResultsStore } from "./results-store.js";
 import { ScanResult } from "./models/scan-result.js";
-import { analyzePostScanResults } from "./post-scan-analysis.js";
 
 const beginPort = parseInt(getQueryParameter("begin_port"));
 const endPort = parseInt(getQueryParameter("end_port"));
@@ -31,7 +30,7 @@ startPortScanner?.addEventListener("click", function handleClick() {
 
   const resultsStore = new ResultsStore<ScanResult[]>();
   const queue = new ConcurrentQueue(nSockets / nScans, resultsStore);
-
+  const startTime = performance.now();
   // scan
   for (let i = beginPort; i <= endPort; i++) {
     const port: Port = {
@@ -52,16 +51,26 @@ startPortScanner?.addEventListener("click", function handleClick() {
   queue
     .waitForCompletion()
     .then(async () => {
+      const totalScanTime = performance.now() - startTime;
       // post scan analysis
       // analyzePostScanResults(resultsStore, socketTimeout);
       try {
         const results = resultsStore.getResults();
-        const response = await fetch("http://localhost:3000/scanresults", {
+        const response = await fetch("http://localhost:3001/scanresults", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
           },
-          body: JSON.stringify(results)
+          body: JSON.stringify({
+            beginPort,
+            endPort,
+            nScans,
+            nSockets,
+            socketTimeout,
+            scanningTechnique,
+            totalScanTime,
+            results
+          })
         });
 
         const data = await response.json();
