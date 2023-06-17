@@ -15,19 +15,13 @@ import java.util.logging.Level;
 
 public class Main {
     public static void main(String[] args) {
-//        final String beginPort = System.getProperty("BEGIN_PORT");
-//        final String endPort = System.getProperty("END_PORT");
-//        final String nScans = System.getProperty("N_SCANS");
-//        final String parallelSockets = System.getProperty("PARALLEL_SOCKETS");
-//        final String socketTimeout = System.getProperty("SOCKET_TIMEOUT");
-//        final String scanningTechnique = System.getProperty("SCANNING_TECHNIQUE");
+        final String beginPort = System.getProperty("BEGIN_PORT");
+        final String endPort = System.getProperty("END_PORT");
+        final String nScans = System.getProperty("N_SCANS");
+        final String parallelSockets = System.getProperty("PARALLEL_SOCKETS");
+        final String socketTimeout = System.getProperty("SOCKET_TIMEOUT");
+        final String scanningTechnique = System.getProperty("SCANNING_TECHNIQUE");
 
-        final String beginPort = "1";
-        final String endPort = "50000";
-        final String nScans = "1";
-        final String parallelSockets = "200";
-        final String socketTimeout = "500";
-        final String scanningTechnique = "fetch";
         System.out.printf("beginPort: %s, endPort: %s, nScans: %s, nSockets: %s, socketTimeout: %s, scanningTechnique: %s%n",
                 beginPort, endPort, nScans, parallelSockets, socketTimeout, scanningTechnique);
         System.out.println("Setting up selenium port scanner");
