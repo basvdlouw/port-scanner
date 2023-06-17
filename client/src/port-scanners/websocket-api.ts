@@ -3,13 +3,13 @@ import { Port } from "../models/port.js";
 import { PortScanner } from "../models/port-scanner.js";
 import { PortStatus } from "../models/port-status.js";
 import { ScanResult } from "../models/scan-result.js";
-import e from "cors";
 
 export const websocketScan: PortScanner = async (
   port: Port,
   timeout: number
 ): Promise<ScanResult> => {
   const start = performance.now();
+  const beginScan = new Date();
   const socket = new WebSocket(`ws://${port.ipaddress}:${port.number}`);
 
   const timeoutReference = setTimeout(() => {
@@ -24,9 +24,12 @@ export const websocketScan: PortScanner = async (
 
   clearTimeout(timeoutReference);
   socket.close();
+  const endScan = new Date();
   const end = performance.now() - start;
 
   const measurement: Measurement = {
+    startTimeOfScan: beginScan,
+    endTimeOfScan: endScan,
     duration: end,
     timedOut: scannedPort.status === PortStatus.TIMEOUT,
     receivedData: scannedPort.status === PortStatus.OPEN

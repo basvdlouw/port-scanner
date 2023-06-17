@@ -24,13 +24,15 @@ export const fetchApiScan: PortScanner = async (
   const timedOut = false;
 
   const start = performance.now();
-
+  const beginScan = new Date();
+  let endScan = null;
   try {
     const response = await fetch(
       `http://${port.ipaddress}:${port.number}`,
       options
     );
     end = performance.now() - start;
+    endScan = new Date();
     receivedData = true;
     port.status = PortStatus.OPEN;
     console.log(
@@ -53,6 +55,8 @@ export const fetchApiScan: PortScanner = async (
   }
 
   const measurement: Measurement = {
+    startTimeOfScan: beginScan,
+    endTimeOfScan: endScan,
     duration: end,
     timedOut,
     receivedData

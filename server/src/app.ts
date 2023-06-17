@@ -4,9 +4,10 @@ import * as http from "http";
 import { startWebSocketServer } from "./webrtc/socket";
 import { ScanResult } from "./models/scan-result";
 import { writeFile } from "fs/promises";
+import { existsSync, mkdirSync } from "fs";
 
 const app = express();
-const port = 3000;
+const port = 3001;
 
 app.use(
   "/",
@@ -23,8 +24,11 @@ app.listen(port, () => {
 
 app.post("/scanresults", async (req, res) => {
   const scanResults: ScanResult[][] = req.body;
-  console.log("scanresults:", scanResults);
-  const filePath = "scan-results.json";
+  const resultsDirectory = path.join(__dirname, "/results");
+  if (!existsSync(resultsDirectory)) {
+    mkdirSync(resultsDirectory);
+  }
+  const filePath = path.join(resultsDirectory, `scan-results.json`);
 
   try {
     if (!scanResults) {
@@ -45,6 +49,6 @@ const server = http.createServer(app);
 
 startWebSocketServer(server);
 
-server.listen(process.env.WEBRTCPORT || 5757, () => {
+server.listen(process.env.WEBRTCPORT || 5758, () => {
   console.log("WebSocket Server started");
 });

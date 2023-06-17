@@ -10,7 +10,7 @@
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module",
-    "project": ["./server/tsconfig.json", "./client/tsconfig.json", "./artificial-ports-server/tsconfig.json"]
+    "project": ["./server/tsconfig.json", "./client/tsconfig.json", "./artificial-ports-server/tsconfig.json", "./playwright-portscan/playwright.config.ts"]
   },
   "rules": {}
 }

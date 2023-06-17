@@ -12,10 +12,12 @@ export const xhrApiScan: PortScanner = (
   let receivedData = false;
   let end = 0;
   const start = performance.now();
+  const beginScan = new Date();
 
   return new Promise<ScanResult>((resolve) => {
     xhr.onreadystatechange = () => {
       if (xhr.readyState === XMLHttpRequest.DONE) {
+        const endTimeOfScan = new Date();
         end = performance.now() - start;
         if (xhr.status >= 200 && xhr.status < 300) {
           receivedData = true;
@@ -34,7 +36,16 @@ export const xhrApiScan: PortScanner = (
           );
         }
         clearTimeout(timeoutReference);
-        resolve(createScanResult(port, end, false, receivedData));
+        resolve(
+          createScanResult(
+            beginScan,
+            endTimeOfScan,
+            port,
+            end,
+            false,
+            receivedData
+          )
+        );
       }
     };
 
@@ -42,7 +53,17 @@ export const xhrApiScan: PortScanner = (
       xhr.abort();
       port.status = PortStatus.TIMEOUT;
       end = performance.now() - start;
-      resolve(createScanResult(port, end, true, receivedData));
+      const endTimeOfScan = new Date();
+      resolve(
+        createScanResult(
+          beginScan,
+          endTimeOfScan,
+          port,
+          end,
+          true,
+          receivedData
+        )
+      );
     }, timeout);
 
     xhr.open("GET", `http://${port.ipaddress}:${port.number}`);
@@ -51,12 +72,16 @@ export const xhrApiScan: PortScanner = (
 };
 
 function createScanResult(
+  startTimeOfScan: Date,
+  endTimeOfScan: Date,
   port: Port,
   duration: number,
   timedOut: boolean,
   receivedData: boolean
 ): ScanResult {
   const measurement: Measurement = {
+    startTimeOfScan: startTimeOfScan,
+    endTimeOfScan: endTimeOfScan,
     duration,
     timedOut,
     receivedData

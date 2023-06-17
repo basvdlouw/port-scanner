@@ -3,7 +3,6 @@ import { Port } from "./models/port.js";
 import { PortStatus } from "./models/port-status.js";
 import { fetchApiScan } from "./port-scanners/fetch-api.js";
 import { websocketScan } from "./port-scanners/websocket-api.js";
-import { webRtcScan } from "./port-scanners/webrtc-api.js";
 import { xhrApiScan } from "./port-scanners/xhr-api.js";
 import { PortScanner } from "./models/port-scanner.js";
 
