@@ -25,7 +25,7 @@ public class Main {
         System.out.printf("beginPort: %s, endPort: %s, nScans: %s, nSockets: %s, socketTimeout: %s, scanningTechnique: %s%n",
                 beginPort, endPort, nScans, parallelSockets, socketTimeout, scanningTechnique);
         System.out.println("Setting up selenium port scanner");
-        System.setProperty("webdriver.chrome.logfile", "/home/chromedriver.log");
+//        System.setProperty("webdriver.chrome.logfile", "/home/chromedriver.log");
         System.setProperty("webdriver.chrome.verboseLogging", "true");
         System.setProperty("webdriver.chrome.whitelistedIps", "");
 
@@ -43,7 +43,7 @@ public class Main {
             System.out.printf("Scan url:%s%n", url);
             driver.get(url);
             driver.findElement(By.id("startPortScanner")).click();
-            final WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(10));
+            final WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(60));
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("finished")));
             System.out.println("Port scanning finished");
         } catch (RuntimeException e) {

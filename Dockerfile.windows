@@ -1,13 +1,40 @@
 ARG BASE_IMAGE="mcr.microsoft.com/windows:20H2-amd64"
 
 FROM $BASE_IMAGE
-# RUN md "C:\\netcat"
-# RUN curl -Lo "C:\\netcat\nc.exe" "https://gitlab.com/kalilinux/packages/windows-binaries/-/raw/kali/master/nc.exe"
-RUN choco install git
 
 
-ENV BEGIN_PORT=10000
-ENV END_PORT=10030
+# RUN powershell Invoke-Webrequest -Uri https://curl.se/windows/dl-8.1.2_3/curl-8.1.2_3-win64-mingw.zip -UseBasicParsing
+# RUN powershell Expand-Archive curl-8.1.2_3-win64-mingw.zip "C:\curl"
 
-# ENTRYPOINT powershell "for ([int]$port = $env:BEGIN_PORT; $port -le $env:END_PORT; $port++) { Start-Process -FilePath 'C:\netcat\nc.exe' -ArgumentList '-L', '-d', '-p', "$port" -WindowStyle Hidden }"
-CMD cmd /c ping -t localhost
+# Install nodejs for server serving port scanner application
+# RUN powershell Invoke-Webrequest -Uri https://nodejs.org/dist/v18.16.0/node-v18.16.0-x64.msi -UseBasicParsing -OutFile "C:/node.msi"
+# RUN powershell Start-Process 'msiexec' -ArgumentList '/i C:/node.msi /quiet /qn /norestart'
+# Install java with chromedriver for automatically serving port scanner application
+# RUN powershell Invoke-Webrequest -Uri https://download.oracle.com/java/20/latest/jdk-20_windows-x64_bin.msi -UseBasicParsing -OutFile "C:/java.msi"
+# RUN powershell Start-Process 'msiexec' -ArgumentList '/i C:/java.msi /quiet /qn /norestart'
+
+# Install chrome
+RUN powershell Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')) 
+RUN choco install googlechrome -y
+RUN choco install git -y
+RUN choco install nodejs-lts -y
+RUN choco install openjdk -y
+# RUN powershell -Command Install-Package git -y
+# Install Chromedriver
+# ENV CHROMEDRIVER_VERSION 114.0.5735.90
+# RUN wget -q --no-check-certificate -O /tmp/chromedriver.zip https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip
+# RUN unzip /tmp/chromedriver.zip -d /opt/
+# RUN rm /tmp/chromedriver.zip
+# ENV CHROME_DRIVER_PATH /opt/chromedriver
+# ENV PATH $CHROME_DRIVER_PATH:$PATH
+
+# Configure experiment to artificially open ports
+COPY ./artificial-ports-server "C:/app/artificial-ports-server"
+COPY ./node_modules "C:/app/public/node_modules"
+COPY ./dist "C:/app/public"
+COPY ./selenium-portscan/target/selenium-portscan-1.0.0-jar-with-dependencies.jar "C:/app/selenium-portscan.jar"
+
+COPY /scripts/start_windows.sh "C:/app/start.sh"
+
+# CMD powershell -Command "while (1 -eq 1) { Write-Host "Hello, World! "; Start-Sleep -Seconds 5 }"
+CMD powershell & "C:\Program Files\Git\bin\bash.exe" "C:/app/start.sh"
