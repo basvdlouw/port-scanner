@@ -18,8 +18,18 @@ RUN apt-get install -y nodejs
 
 # Install java with chromedriver for automatically serving port scanner application
 RUN apt install -y openjdk-19-jdk
+
+# Install chrome
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 RUN dpkg -i google-chrome-stable_current_amd64.deb
+
+# Install Chromedriver
+ENV CHROMEDRIVER_VERSION 114.0.5735.90
+RUN wget -q --no-check-certificate -O /tmp/chromedriver.zip https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip
+RUN unzip /tmp/chromedriver.zip -d /opt/
+RUN rm /tmp/chromedriver.zip
+ENV CHROME_DRIVER_PATH /opt/chromedriver
+ENV PATH $CHROME_DRIVER_PATH:$PATH
 
 # Configure experiment to artificially open ports
 COPY ./artificial-ports-server /app/artificial-ports-server
@@ -30,9 +40,10 @@ COPY ./selenium-portscan/target/selenium-portscan-1.0.0-jar-with-dependencies.ja
 COPY /scripts/start.sh /app/start.sh
 
 RUN chmod -R 777 /home/
+RUN chmod -R 777 /app/
 RUN useradd -u 8877 user
 RUN usermod -a -G root user
-
+# /app/public/server/results
 USER user
 
 CMD ["/app/start.sh"]

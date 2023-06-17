@@ -2,8 +2,8 @@ import express from "express";
 import * as http from "http";
 
 const app = express();
-const beginPort = process.env.BEGIN_PORT || "3000";
-const endPort = process.env.END_PORT || "3005";
+const beginPort = process.env.BEGIN_ART_PORT || "4000";
+const endPort = process.env.END_ART_PORT || "4005";
 
 function startServer(port: any) {
   const server = http.createServer(app);
