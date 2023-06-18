@@ -4,6 +4,7 @@ def read_file(file_path):
             file_contents = file.read()
             return file_contents
     except FileNotFoundError:
-        raise Exception("File not found.")
+        print("File not found")
+        return None
     except IOError:
-        raise Exception("An error occurred while reading the file.")
+        return None

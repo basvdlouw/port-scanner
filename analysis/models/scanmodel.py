@@ -1,13 +1,24 @@
 from models.scanresult import ScanResult
 
 class ScanModel:
-    def __init__(self, begin_port, end_port, n_scans, n_sockets, socket_timeout, scanning_technique, total_scan_time,
-                 scan_results: list[list[ScanResult]]):
-        self.begin_port = begin_port
-        self.end_port = end_port
-        self.n_scans = n_scans
-        self.n_sockets = n_sockets
-        self.socket_timeout = socket_timeout
-        self.scanning_technique = scanning_technique
-        self.total_scan_time = total_scan_time
-        self.scan_results = scan_results
+    def __init__(self, beginPort, endPort, nScans, nSockets, socketTimeout, scanningTechnique, totalScanTime,
+                 results: list[list[ScanResult]]):
+        self.begin_port = beginPort
+        self.end_port = endPort
+        self.n_scans = nScans
+        self.n_sockets = nSockets
+        self.socket_timeout = socketTimeout
+        self.scanning_technique = scanningTechnique
+        self.total_scan_time = totalScanTime
+
+        twodlist = []
+
+        for x in results:
+            temp = []
+            for y in x:
+                scan = ScanResult(**y)
+                temp.append(scan)
+            twodlist.append(temp)
+
+
+        self.results = twodlist
