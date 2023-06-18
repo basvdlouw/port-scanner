@@ -3,14 +3,12 @@ BASE_IMAGE="mcr.microsoft.com/windows:20H2-amd64"
 DOCKERFILE="Dockerfile.windows"
 CONTAINER_NAME="win-container"
 BEGIN_PORT=1
-END_PORT=65536
+END_PORT=65535
 SCANNING_TECHNIQUE=fetch
 N_SCANS=1
 PARALLEL_SOCKETS=200
 SOCKET_TIMEOUT=200
 TAG="windows-chrome"
-
-# END_PORT=65536
 
 ./scripts/build.sh $BASE_IMAGE $DOCKERFILE $TAG
 ./scripts/remove-containers.sh

@@ -37,4 +37,4 @@ COPY ./selenium-portscan/target/selenium-portscan-1.0.0-jar-with-dependencies.ja
 COPY /scripts/start_windows.ps1 "C:/app/start.ps1"
 
 # CMD powershell -Command "while (1 -eq 1) { Write-Host "Hello, World! "; Start-Sleep -Seconds 5 }"
-CMD powershell Set-ExecutionPolicy Bypass -Scope Process -Force; "C:/app/start.ps1"
+CMD powershell Set-ExecutionPolicy Bypass -Scope Process -Force; "C:/app/start.ps1" -NoExit
