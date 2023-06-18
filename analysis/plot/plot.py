@@ -1,14 +1,21 @@
 import matplotlib.pyplot as plt
-import numpy as np
-from datetime import datetime, timedelta
+from datetime import datetime
 
 from models.scanmodel import ScanModel
 
-from analysis.util.utils import get_random_color
 
 
-def get_plot(data: list[ScanModel]):
+def get_plot_parallel_sockets(data: list[ScanModel], filename: str):
     plt.style.use('_mpl-gallery')
+    plt.rcParams["figure.autolayout"] = True
+    plt.figure(figsize=(10, 6))  # Width: 10 inches, Height: 6 inches
+    plt.tight_layout()
+    plt.xlabel("Time (seconds)")
+    plt.ylabel("Ports scanned")
+    plt.title("N Parallel sockets, 200ms Socket timeout")
+    # fig = plt.figure(figsize=(10, 10))
+    plt.savefig(filename, dpi=1000)
+
 
     y: list[int] = [*range(1, 65536)]
     x = []
@@ -20,18 +27,12 @@ def get_plot(data: list[ScanModel]):
         for scan_result in scan.results:
             end_time: str = scan_result[0].measurement.endTimeOfScan
             end_date = datetime.strptime(end_time[:-1], "%Y-%m-%dT%H:%M:%S.%f")
-            delta = (end_date - start_date).total_seconds() * 1000
+            delta = (end_date - start_date).total_seconds()
             z.append(delta)
         x.append(z)
 
     for index, scan in enumerate(x):
-        plt.plot(scan, y, color=get_random_color(), label=data[index].n_sockets)
-    plt.rcParams["figure.autolayout"] = True
-    plt.rcParams["figure.figsize"] = [1000, 1000]
-    plt.xlabel("Time")
-    plt.ylabel("Ports scanned")
-    plt.title("Parallel sockets")
-    plt.legend(loc='upper center')
-    plt.savefig("output.png", dpi=10006)
-    # plt.grid(True)
+        plt.plot(scan, y, color="rbgkm"[index], label=data[index].n_sockets)
+    plt.legend()
+
     return plt
