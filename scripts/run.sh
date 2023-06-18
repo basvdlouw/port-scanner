@@ -15,7 +15,7 @@ docker run -e BEGIN_PORT=$BEGIN_PORT \
            -e SOCKET_TIMEOUT=$SOCKET_TIMEOUT \
            -e BEGIN_ART_PORT=5000 \
            -e END_ART_PORT=5005 \
-           -t --name $CONTAINER_NAME \
+           --detach -t --name $CONTAINER_NAME \
            $TAG
         #    --privileged=true \
         #            --security-opt seccomp=scripts/settings.json \

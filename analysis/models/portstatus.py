@@ -1,0 +1,8 @@
+class PortStatus:
+    UNKNOWN = "UNKNOWN"
+    TIMEOUT = "TIMEOUT"
+    OPEN = "OPEN"
+    LIKELY_OPEN = "OPEN/UNSAFE/RESTRICTED"
+    CLOSE = "CLOSE"
+    MESSAGE = "MESSAGE"
+    ERROR = "ERROR"
