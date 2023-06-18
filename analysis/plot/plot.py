@@ -14,8 +14,6 @@ def get_plot_parallel_sockets(data: list[ScanModel], filename: str):
     plt.ylabel("Ports scanned")
     plt.title("N Parallel sockets, 200ms Socket timeout")
     # fig = plt.figure(figsize=(10, 10))
-    plt.savefig(filename, dpi=1000)
-
 
     y: list[int] = [*range(1, 65536)]
     x = []
@@ -34,5 +32,5 @@ def get_plot_parallel_sockets(data: list[ScanModel], filename: str):
     for index, scan in enumerate(x):
         plt.plot(scan, y, color="rbgkm"[index], label=data[index].n_sockets)
     plt.legend()
-
+    plt.savefig(filename, dpi=2000)
     return plt
