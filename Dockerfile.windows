@@ -34,7 +34,7 @@ COPY ./node_modules "C:/app/public/node_modules"
 COPY ./dist "C:/app/public"
 COPY ./selenium-portscan/target/selenium-portscan-1.0.0-jar-with-dependencies.jar "C:/app/selenium-portscan.jar"
 
-COPY /scripts/start_windows.sh "C:/app/start.sh"
+COPY /scripts/start_windows.ps1 "C:/app/start.ps1"
 
 # CMD powershell -Command "while (1 -eq 1) { Write-Host "Hello, World! "; Start-Sleep -Seconds 5 }"
-CMD powershell & "C:\Program Files\Git\bin\bash.exe" "C:/app/start.sh"
+CMD powershell Set-ExecutionPolicy Bypass -Scope Process -Force; "C:/app/start.ps1"

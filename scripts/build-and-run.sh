@@ -3,7 +3,7 @@ BASE_IMAGE="mcr.microsoft.com/windows:20H2-amd64"
 DOCKERFILE="Dockerfile.windows"
 CONTAINER_NAME="win-container"
 BEGIN_PORT=1
-END_PORT=60000
+END_PORT=3000
 SCANNING_TECHNIQUE=fetch
 N_SCANS=1
 PARALLEL_SOCKETS=200
@@ -11,7 +11,7 @@ SOCKET_TIMEOUT=300
 TAG="windows-chrome"
 
 ./scripts/build.sh $BASE_IMAGE $DOCKERFILE $TAG
-./scripts/remove-containers.shd
+./scripts/remove-containers.sh
 ./scripts/run.sh $BEGIN_PORT $END_PORT $SCANNING_TECHNIQUE $N_SCANS $PARALLEL_SOCKETS $SOCKET_TIMEOUT $current_time $CONTAINER_NAME $TAG
 while true; do
     container_status=$(docker inspect -f '{{.State.Running}}' "$(docker ps -aqf "name=$CONTAINER_NAME")")
