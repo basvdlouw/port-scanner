@@ -1,13 +1,17 @@
 import json
 import os
+from plot.plot import get_plot
 from models.scanmodel import ScanModel
 from util.utils import read_file
+
 
 scan_results_directory = "scan-results"
 
 
 def main():
     scan_results: list[ScanModel] = get_results("mcr.microsoft.com/windows:20H2-amd64", "fetch")
+    plot = get_plot(scan_results)
+    plot.show()
 
 def get_results(operating_system: str, scanning_technique: str):
     directory = os.path.abspath(os.path.join(os.path.realpath(__file__), "../..", scan_results_directory))
