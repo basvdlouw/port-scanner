@@ -1,4 +1,4 @@
-from analysis.models.portstatus import PortStatus
+from models.portstatus import PortStatus
 
 class Port:
     def __init__(self, ipaddress: str, number: int, status: "PortStatus"):

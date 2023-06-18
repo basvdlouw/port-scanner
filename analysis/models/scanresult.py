@@ -1,7 +1,7 @@
-from analysis.models.port import Port
-from analysis.models.measurement import Measurement
+from models.port import Port
+from models.measurement import Measurement
 
 class ScanResult:
-    def __init__(self, measurement: "Measurement", port: "Port"):
-        self.measurement = measurement
+    def __init__(self, port: "Port", measurement: "Measurement"):
         self.port = port
+        self.measurement = measurement
