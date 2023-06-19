@@ -9,7 +9,7 @@ scan_results_directory = "scan-results"
 
 
 def main():
-    scan_technique = "xhr"
+    scan_technique = "websocket"
     filename = f"win_chrome_n_sockets_{scan_technique}.png"
     scan_results: list[ScanModel] = get_results("mcr.microsoft.com/windows:20H2-amd64", "SCANNING_TECHNIQUE", scan_technique, "n_sockets")
     plot = get_plot_parallel_sockets(scan_results, filename)

@@ -37,13 +37,12 @@ COPY ./node_modules /app/public/node_modules
 COPY ./dist /app/public
 COPY ./selenium-portscan/target/selenium-portscan-1.0.0-jar-with-dependencies.jar /app/selenium-portscan.jar
 
-COPY /scripts/start.sh /app/start.sh
+COPY /scripts/start_ubuntu.sh /app/start.sh
 
 RUN chmod -R 777 /home/
 RUN chmod -R 777 /app/
 RUN useradd -u 8877 user
 RUN usermod -a -G root user
-# /app/public/server/results
 USER user
 
 CMD ["/app/start.sh"]

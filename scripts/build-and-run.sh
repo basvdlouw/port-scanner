@@ -1,14 +1,24 @@
-# BASE_IMAGE=library/ubuntu:22.04
-BASE_IMAGE="mcr.microsoft.com/windows:20H2-amd64"
-DOCKERFILE="Dockerfile.windows"
-CONTAINER_NAME="win-container"
+# BASE_IMAGE="mcr.microsoft.com/windows:20H2-amd64"
+# DOCKERFILE="Dockerfile.windows"
+# CONTAINER_NAME="win-container"
+# BEGIN_PORT=1
+# END_PORT=65535
+# SCANNING_TECHNIQUE=websocket
+# N_SCANS=1
+# PARALLEL_SOCKETS=250
+# SOCKET_TIMEOUT=200
+# TAG="windows-chrome"
+
+BASE_IMAGE=library/ubuntu:22.04
+DOCKERFILE="Dockerfile.ubuntu"
+CONTAINER_NAME="ubuntu-container"
 BEGIN_PORT=1
 END_PORT=65535
-SCANNING_TECHNIQUE=websocket
+SCANNING_TECHNIQUE=xhr
 N_SCANS=1
 PARALLEL_SOCKETS=250
 SOCKET_TIMEOUT=200
-TAG="windows-chrome"
+TAG="ubuntu-chrome"
 
 ./scripts/build.sh $BASE_IMAGE $DOCKERFILE $TAG
 ./scripts/remove-containers.sh
