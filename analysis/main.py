@@ -24,19 +24,19 @@ def get_results(operating_system: str, filter_property: str, filter_value: str, 
         metadata_content = read_file(metadata_file)
         results_content = read_file(results_file)
         if results_content:
-            technique_found = False
+            property_found = False
             os_found = False
             for line in metadata_content.split("\n"):
                 separator = "="
                 if separator in line:
                     key, value = line.split(separator)
                     if key == filter_property and value == filter_value:
-                        technique_found = True
+                        property_found = True
                         continue
                     if key == "BASE_IMAGE" and value == operating_system:
                         os_found = True
                         continue
-            if technique_found and os_found:
+            if property_found and os_found:
                 results.append(ScanModel(**json.loads(results_content)))
     results.sort(key=lambda x: getattr(x, sort_key))
     return results
