@@ -32,5 +32,5 @@ def get_plot_parallel_sockets(data: list[ScanModel], filename: str):
     for index, scan in enumerate(x):
         plt.plot(scan, y, color="rbgkm"[index], label=data[index].n_sockets)
     plt.legend()
-    plt.savefig(f"figs/{filename}", dpi=2000)
+    plt.savefig(f"figs/{filename}", dpi=300)
     return plt
