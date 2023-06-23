@@ -12,4 +12,4 @@ sleep 20
 # Add any necessary waiting logic here, e.g., polling an endpoint
 
 # Start the Java command using the environment variables
-java -DBEGIN_PORT="$BEGIN_PORT" -DEND_PORT="$END_PORT" -DN_SCANS="$N_SCANS" -DPARALLEL_SOCKETS="$PARALLEL_SOCKETS" -DSOCKET_TIMEOUT="$SOCKET_TIMEOUT" -DSCANNING_TECHNIQUE="$SCANNING_TECHNIQUE" -jar /app/selenium-portscan.jar > /dev/stdout 2>&1
+java -DBEGIN_PORT="$BEGIN_PORT" -DEND_PORT="$END_PORT" -DN_SCANS="$N_SCANS" -DPARALLEL_SOCKETS="$PARALLEL_SOCKETS" -DSOCKET_TIMEOUT="$SOCKET_TIMEOUT" -DSCANNING_TECHNIQUE="$SCANNING_TECHNIQUE" -DCONTAINER_NAME="$CONTAINER_NAME" -jar /app/selenium-portscan.jar > /dev/stdout 2>&1
