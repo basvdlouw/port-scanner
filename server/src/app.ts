@@ -45,10 +45,10 @@ app.post("/scanresults", async (req, res) => {
   }
 });
 
-const server = http.createServer(app);
+// const server = http.createServer(app);
 
-startWebSocketServer(server);
+// startWebSocketServer(server);
 
-server.listen(process.env.WEBRTCPORT || 5758, () => {
-  console.log("WebSocket Server started");
-});
+// server.listen(process.env.WEBRTCPORT || 5758, () => {
+//   console.log("WebSocket Server started");
+// });
