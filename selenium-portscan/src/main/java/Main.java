@@ -29,8 +29,8 @@ public class Main {
         System.setProperty("webdriver.chrome.verboseLogging", "true");
         System.setProperty("webdriver.chrome.whitelistedIps", "");
 
-        String chromeDriverPath = Paths.get("/opt/chromedriver").toAbsolutePath().toString();
-        System.setProperty("webdriver.chrome.driver", chromeDriverPath);
+//        String chromeDriverPath = Paths.get("/opt/chromedriver").toAbsolutePath().toString();
+//        System.setProperty("webdriver.chrome.driver", chromeDriverPath);
         // Create a new instance of the Chrome driver
         final ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--headless", "--remote-allow-origins=*", "--ignore-ssl-errors=yes", "--ignore-certificate-errors");
