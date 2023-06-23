@@ -1,17 +1,12 @@
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.logging.LogType;
-import org.openqa.selenium.logging.LoggingPreferences;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.nio.file.Paths;
 import java.time.Duration;
-import java.util.logging.Level;
 
 public class Main {
     public static void main(String[] args) {
@@ -21,6 +16,7 @@ public class Main {
         final String parallelSockets = System.getProperty("PARALLEL_SOCKETS");
         final String socketTimeout = System.getProperty("SOCKET_TIMEOUT");
         final String scanningTechnique = System.getProperty("SCANNING_TECHNIQUE");
+        final String containerName = System.getProperty("CONTAINER_NAME");
 
         System.out.printf("beginPort: %s, endPort: %s, nScans: %s, nSockets: %s, socketTimeout: %s, scanningTechnique: %s%n",
                 beginPort, endPort, nScans, parallelSockets, socketTimeout, scanningTechnique);
@@ -28,9 +24,10 @@ public class Main {
         System.setProperty("webdriver.chrome.logfile", "/app/chromedriver.log");
         System.setProperty("webdriver.chrome.verboseLogging", "true");
         System.setProperty("webdriver.chrome.whitelistedIps", "");
-
-//        String chromeDriverPath = Paths.get("/opt/chromedriver").toAbsolutePath().toString();
-//        System.setProperty("webdriver.chrome.driver", chromeDriverPath);
+        if(!containerName.equals("win-container")) {
+            String chromeDriverPath = Paths.get("/opt/chromedriver").toAbsolutePath().toString();
+            System.setProperty("webdriver.chrome.driver", chromeDriverPath);
+        }
         // Create a new instance of the Chrome driver
         final ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--headless", "--remote-allow-origins=*", "--ignore-ssl-errors=yes", "--ignore-certificate-errors");

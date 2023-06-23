@@ -18,6 +18,7 @@ if [ "$CONTAINER_NAME" = "win-container" ]; then
                -e SOCKET_TIMEOUT=$SOCKET_TIMEOUT \
                -e BEGIN_ART_PORT=$BEGIN_ART_PORT \
                -e END_ART_PORT=$END_ART_PORT \
+               -e CONTAINER_NAME=$CONTAINER_NAME \
                --shm-size=2048m \
                --detach -t --name $CONTAINER_NAME \
                $TAG
@@ -30,6 +31,7 @@ elif [ "$CONTAINER_NAME" = "ubuntu-container" ]; then
                -e SOCKET_TIMEOUT=$SOCKET_TIMEOUT \
                -e BEGIN_ART_PORT=$BEGIN_ART_PORT \
                -e END_ART_PORT=$END_ART_PORT \
+               -e CONTAINER_NAME=$CONTAINER_NAME \
                --shm-size=2048m \
                --privileged=true \
                --security-opt seccomp=scripts/settings.json \
