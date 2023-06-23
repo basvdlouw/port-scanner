@@ -6,6 +6,8 @@ N_SCANS=$5
 PARALLEL_SOCKETS=$6
 SOCKET_TIMEOUT=$7
 TIMESTAMP=$8
+BEGIN_ART_PORT=$9
+END_ART_PORT=${10}
 
 metadataFile="C:/git/port-scanner/scan-results/$TIMESTAMP/metadata.txt"
 
@@ -20,3 +22,5 @@ echo "SCANNING_TECHNIQUE=$SCANNING_TECHNIQUE" >> $metadataFile
 echo "N_SCANS=$N_SCANS" >> $metadataFile
 echo "PARALLEL_SOCKETS=$PARALLEL_SOCKETS" >> $metadataFile
 echo "SOCKET_TIMEOUT=$SOCKET_TIMEOUT" >> $metadataFile
+echo "BEGIN_ARTIFICIAL_PORT_RANGE=$BEGIN_ART_PORT" >> $metadataFile
+echo "END_ARTIFICIAL_PORT_RANGE=$END_ART_PORT" >> $metadataFile
