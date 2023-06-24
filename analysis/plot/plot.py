@@ -72,7 +72,7 @@ def get_plot_efficacy(data: tuple[list[ScanModel], list[str]], filename: str):
     fig, ax = plt.subplots()
 
     # Create the histogram
-    ax.hist(x, bins=10, edgecolor='black')
+    # ax.hist(x, bins=10, edgecolor='black')
 
     # Set labels and title
     ax.set_xlabel('Duration (ms)')

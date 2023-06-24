@@ -10,15 +10,4 @@ class ScanModel:
         self.socket_timeout = socketTimeout
         self.scanning_technique = scanningTechnique
         self.total_scan_time = totalScanTime
-
-        twodlist = []
-
-        for x in results:
-            temp = []
-            for y in x:
-                scan = ScanResult(**y)
-                temp.append(scan)
-            twodlist.append(temp)
-
-
-        self.results = twodlist
+        self.results = [[ScanResult(**y) for y in x] for x in results]
