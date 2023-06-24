@@ -46,7 +46,7 @@ def get_results(filter_properties: [], filter_values: [], sort_key: str):
             if len(properties_found) == len(filter_properties):
                 results.append(ScanModel(**json.loads(results_content)))
                 metadata_files.append(metadata_file)
-    results.sort(key=lambda x: getattr(x, sort_key))
+    # results.sort(key=lambda x: getattr(x, sort_key))
     return results, metadata_files
 
 
