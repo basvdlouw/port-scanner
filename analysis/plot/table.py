@@ -23,17 +23,17 @@ def get_table(data: tuple[list[ScanModel], list[str]], filename: str):
     data = rows
 
     # Create table
-    fig, ax = plt.subplots(figsize=(13, 9))
+    fig, ax = plt.subplots(figsize=(14, 9))
     ax.axis('off')
     table = ax.table(
         cellText=data,
-        colLabels=["Base Image", "Scanning technique", "Open Ports", "Ports Detected", "Scan Duration"],
+        colLabels=["Base Image", "Scanning technique", "Open Ports", "Ports Detected", "Scan Duration (ms)"],
         cellLoc='center',
         loc='center',
     )
 
     # Adjust table settings
     table.auto_set_font_size(True)
-    table.scale(1.3, 1.3)
+    table.scale(1.2, 1.3)
     plt.savefig(f"figs/{filename}", dpi=300)
     return plt

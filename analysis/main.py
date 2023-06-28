@@ -6,22 +6,22 @@ from plot.plot import get_plot_efficacy, get_plot_parallel_sockets
 from models.scanmodel import ScanModel
 from util.utils import read_file, get_results_dir
 
-scan_results_directory = "scan-results\\efficacy"
-op_sys = "windows"
-browser = "chrome"
-image = "mcr.microsoft.com/windows:20H2-amd64"
-# image = "library/ubuntu:22.04"
+scan_results_directory = "scan-results"
+op_sys = "Windows"
+browser = "Google Chrome"
+# image = "mcr.microsoft.com/windows:20H2-amd64"
+image = "library/ubuntu:22.04"
 plot_type = "efficacy"
-scan_technique = "fetch"
+scan_technique = "Websocket"
 filename = f"{plot_type}/{op_sys}_{browser}_{plot_type}_{scan_technique}.png"
-art_ports = "50033"
+art_ports = "50032"
 
 def main():
-    scan_results: tuple[list[ScanModel], list[str]] = get_results([], [], "scanning_technique")
+    scan_results: tuple[list[ScanModel], list[str]] = get_results(["END_ARTIFICIAL_PORT_RANGE", "SCANNING_TECHNIQUE", "BASE_IMAGE"], [art_ports, scan_technique, image], "scanning_technique")
     # scan_results: tuple[list[ScanModel], list[str]] = get_results(["SCANNING_TECHNIQUE", "END_ARTIFICIAL_PORT_RANGE", "BASE_IMAGE"], [scan_technique, art_ports, image], "total_scan_time")
     # plot = get_plot_parallel_sockets(scan_results, filename)
-    # plot = get_plot_efficacy(scan_results, filename)
-    plot = get_table(scan_results, "table.png")
+    plot = get_plot_efficacy(scan_results, filename, f"{op_sys} {browser} {scan_technique}")
+    # plot = get_table(scan_results, "table.png")
     plot.show()
 
 
@@ -41,7 +41,7 @@ def get_results(filter_properties: [], filter_values: [], sort_key: str):
                 if separator in line:
                     key, value = line.split(separator)
                     for index, metadata_property in enumerate(filter_properties):
-                        if key == metadata_property and value == filter_values[index]:
+                        if key == metadata_property and value == filter_values[index].lower():
                             properties_found.add(metadata_property)
             if len(properties_found) == len(filter_properties):
                 results.append(ScanModel(**json.loads(results_content)))
