@@ -8,9 +8,9 @@ from util.utils import read_file, get_results_dir
 
 scan_results_directory = "scan-results"
 op_sys = "Windows"
-browser = "Google Chrome"
-# image = "mcr.microsoft.com/windows:20H2-amd64"
-image = "library/ubuntu:22.04"
+browser = "Firefox"
+image = "mcr.microsoft.com/windows:20H2-amd64"
+# image = "library/ubuntu:22.04"
 plot_type = "efficacy"
 scan_technique = "Websocket"
 filename = f"{plot_type}/{op_sys}_{browser}_{plot_type}_{scan_technique}.png"

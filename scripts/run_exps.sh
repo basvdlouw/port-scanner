@@ -1,19 +1,6 @@
-# BASE_IMAGE="mcr.microsoft.com/windows:20H2-amd64"
-# DOCKERFILE="Dockerfile.windows"
-# CONTAINER_NAME="win-container"
-# BEGIN_PORT=49900
-# END_PORT=50200
-# BEGIN_ART_PORT=50000
-# END_ART_PORTS=(50009 50032 50049 50099)
-# SCANNING_TECHNIQUES=("fetch" "websocket" "xhr")
-# N_SCANS=1
-# PARALLEL_SOCKETS=50
-# SOCKET_TIMEOUT=200
-# TAG="windows-chrome"
-
-BASE_IMAGE=library/ubuntu:22.04
-DOCKERFILE="Dockerfile.ubuntu"
-CONTAINER_NAME="ubuntu-container"
+BASE_IMAGE="mcr.microsoft.com/windows:20H2-amd64"
+DOCKERFILE="Dockerfile.windows-firefox"
+CONTAINER_NAME="win-container"
 BEGIN_PORT=49900
 END_PORT=50200
 BEGIN_ART_PORT=50000
@@ -22,7 +9,20 @@ SCANNING_TECHNIQUES=("fetch" "websocket" "xhr")
 N_SCANS=1
 PARALLEL_SOCKETS=50
 SOCKET_TIMEOUT=200
-TAG="ubuntu-chrome"
+TAG="windows-chrome"
+
+# BASE_IMAGE=library/ubuntu:22.04
+# DOCKERFILE="Dockerfile.ubuntu"
+# CONTAINER_NAME="ubuntu-container"
+# BEGIN_PORT=49900
+# END_PORT=50200
+# BEGIN_ART_PORT=50000
+# END_ART_PORTS=(50009 50032 50049 50099)
+# SCANNING_TECHNIQUES=("fetch" "websocket" "xhr")
+# N_SCANS=1
+# PARALLEL_SOCKETS=50
+# SOCKET_TIMEOUT=200
+# TAG="ubuntu-chrome"
 
 for TECHNIQUE in "${SCANNING_TECHNIQUES[@]}"; do 
   for END_ART_PORT in "${END_ART_PORTS[@]}"; do

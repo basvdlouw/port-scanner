@@ -8,6 +8,7 @@ SOCKET_TIMEOUT=$7
 TIMESTAMP=$8
 BEGIN_ART_PORT=$9
 END_ART_PORT=${10}
+DOCKERFILE=${11}
 
 metadataFile="C:/git/port-scanner/scan-results/$TIMESTAMP/metadata.txt"
 
@@ -24,3 +25,4 @@ echo "PARALLEL_SOCKETS=$PARALLEL_SOCKETS" >> $metadataFile
 echo "SOCKET_TIMEOUT=$SOCKET_TIMEOUT" >> $metadataFile
 echo "BEGIN_ARTIFICIAL_PORT_RANGE=$BEGIN_ART_PORT" >> $metadataFile
 echo "END_ARTIFICIAL_PORT_RANGE=$END_ART_PORT" >> $metadataFile
+echo "DOCKERFILE=$DOCKERFILE" >> $metadataFile

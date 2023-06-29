@@ -26,5 +26,5 @@ while true; do
 done
 echo "Finished Running"
 current_time=$(date "+%Y.%m.%d-%H.%M.%S")
-./scripts/save-metadata.sh $BASE_IMAGE $BEGIN_PORT $END_PORT $SCANNING_TECHNIQUE $N_SCANS $PARALLEL_SOCKETS $SOCKET_TIMEOUT $current_time $BEGIN_ART_PORT $END_ART_PORT
+./scripts/save-metadata.sh $BASE_IMAGE $BEGIN_PORT $END_PORT $SCANNING_TECHNIQUE $N_SCANS $PARALLEL_SOCKETS $SOCKET_TIMEOUT $current_time $BEGIN_ART_PORT $END_ART_PORT $DOCKERFILE
 ./scripts/copy-scan-results-from-container.sh $current_time $CONTAINER_NAME
