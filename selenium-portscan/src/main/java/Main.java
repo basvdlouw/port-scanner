@@ -23,20 +23,20 @@ public class Main {
         System.out.printf("beginPort: %s, endPort: %s, nScans: %s, nSockets: %s, socketTimeout: %s, scanningTechnique: %s%n",
                 beginPort, endPort, nScans, parallelSockets, socketTimeout, scanningTechnique);
         System.out.println("Setting up selenium port scanner");
-        System.setProperty("webdriver.chrome.logfile", "/app/chromedriver.log");
+        // System.setProperty("webdriver.chrome.logfile", "/app/chromedriver.log");
         System.setProperty("webdriver.chrome.verboseLogging", "true");
         System.setProperty("webdriver.chrome.whitelistedIps", "");
-        if(!containerName.equals("win-container")) {
-            String chromeDriverPath = Paths.get("/opt/chromedriver").toAbsolutePath().toString();
-            System.setProperty("webdriver.chrome.driver", chromeDriverPath);
-        }
+        // if(!containerName.equals("win-container")) {
+        //     String chromeDriverPath = Paths.get("/opt/chromedriver").toAbsolutePath().toString();
+        //     System.setProperty("webdriver.chrome.driver", chromeDriverPath);
+        // }
         // Create a new instance of the Chrome driver
-//        final ChromeOptions chromeOptions = new ChromeOptions();
-//        chromeOptions.addArguments("--headless", "--remote-allow-origins=*", "--ignore-ssl-errors=yes", "--ignore-certificate-errors");
-//        final WebDriver driver = new ChromeDriver(chromeOptions);
-        final  FirefoxOptions firefoxOptions = new FirefoxOptions();
-        firefoxOptions.addArguments("--headless", "--remote-allow-origins=*", "--ignore-ssl-errors=yes", "--ignore-certificate-errors");
-        final WebDriver driver = new FirefoxDriver();
+       final ChromeOptions chromeOptions = new ChromeOptions();
+       chromeOptions.addArguments("--headless", "--remote-allow-origins=*", "--ignore-ssl-errors=yes", "--ignore-certificate-errors");
+       final WebDriver driver = new ChromeDriver(chromeOptions);
+        // final  FirefoxOptions firefoxOptions = new FirefoxOptions();
+        // firefoxOptions.addArguments("--headless", "--remote-allow-origins=*", "--ignore-ssl-errors=yes", "--ignore-certificate-errors");
+        // final WebDriver driver = new FirefoxDriver();
         try {
             System.out.println("Starting port scanner");
             final String url = String.format("http://localhost:3001/?begin_port=%s&end_port=%s&n_scans=%s&n_sockets=%s&socket_timeout=%s&scanning_technique=%s",
