@@ -12,7 +12,7 @@
 # TAG="windows-chrome"
 
 BASE_IMAGE=library/ubuntu:22.04
-DOCKERFILE="Dockerfile.ubuntu"
+DOCKERFILE="Dockerfile.ubuntu-chrome"
 CONTAINER_NAME="ubuntu-container"
 BEGIN_PORT=1
 END_PORT=50200
@@ -25,9 +25,9 @@ SOCKET_TIMEOUT=200
 TAG="ubuntu-chrome"
 
 for TECHNIQUE in "${SCANNING_TECHNIQUES[@]}"; do
-    for PARALLEL_SOCKET in "${{PARALEL_SOCKETS}[@]}"; do
+    for PARALLEL_SOCKET in "${PARALLEL_SOCKETS}[@]}"; do
         for END_ART_PORT in "${END_ART_PORTS[@]}"; do
-            ./scripts/build-and-run.sh $BASE_IMAGE $DOCKERFILE $CONTAINER_NAME $BEGIN_PORT $END_PORT $BEGIN_ART_PORT $END_ART_PORT $TECHNIQUE $N_SCANS $PARALLEL_SOCKETS $SOCKET_TIMEOUT $TAG
+            ./scripts/build-and-run.sh $BASE_IMAGE $DOCKERFILE $CONTAINER_NAME $BEGIN_PORT $END_PORT $BEGIN_ART_PORT $END_ART_PORT $TECHNIQUE $N_SCANS $PARALLEL_SOCKET $SOCKET_TIMEOUT $TAG
         done
     done
 done
