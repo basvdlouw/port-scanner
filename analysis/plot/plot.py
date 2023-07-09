@@ -10,7 +10,7 @@ from models.scanmodel import ScanModel
 from analysis.util.utils import get_metadata_property
 
 
-def get_plot_parallel_sockets(data: list[ScanModel], filename: str):
+def get_plot_parallel_sockets(data: tuple[list[ScanModel], list[str]], filename: str):
     plt.rcParams["figure.autolayout"] = True
     plt.figure(figsize=(10, 6))  # Width: 10 inches, Height: 6 inches
     plt.tight_layout()
@@ -22,7 +22,7 @@ def get_plot_parallel_sockets(data: list[ScanModel], filename: str):
     y: list[int] = [*range(1, 65536)]
     x = []
 
-    for scan in data:
+    for scan, metadata in zip(*data):
         z = []
         begin_date: str = scan.results[0][0].measurement.startTimeOfScan
         start_date = datetime.strptime(begin_date[:-1], "%Y-%m-%dT%H:%M:%S.%f")
@@ -34,13 +34,16 @@ def get_plot_parallel_sockets(data: list[ScanModel], filename: str):
         x.append(z)
 
     for index, scan in enumerate(x):
-        plt.plot(scan, y, color="rbgkm"[index], label=data[index].n_sockets)
+        # plt.plot(scan, y, color="rbgkm"[index], label=data[index].n_sockets)
+        plt.plot(scan, y)
     plt.legend()
     plt.savefig(f"figs/{filename}", dpi=300)
     return plt
 
 
 def get_plot_efficacy(data: tuple[list[ScanModel], list[str]], filename: str, title: str):
+    print(data)
+
     plt.rcParams["figure.autolayout"] = True
     plt.figure(figsize=(10, 6))  # Width: 10 inches, Height: 6 inches
     plt.tight_layout()
