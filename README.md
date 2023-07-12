@@ -2,6 +2,9 @@
 
 [Port Scanner](https://basvdlouw.github.io/port-scanner/)
 
+# Example request
+https://basvdlouw.github.io/port-scanner/?begin_port=1&end_port=65000&n_scans=1&n_sockets=100&socket_timeout=150&scanning_technique=fetch
+
 # Port Scanner
 
 Application for performing browser-based port scanning using different JavaScript APIs
