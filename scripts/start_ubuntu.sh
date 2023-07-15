@@ -1,5 +1,4 @@
 #!/bin/sh
-
 # Start the first server
 node /app/public/server/app.js > /dev/stdout 2>&1 &
 

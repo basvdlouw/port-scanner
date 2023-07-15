@@ -17,11 +17,11 @@ filename = f"{plot_type}/{op_sys}_{browser}_{plot_type}_{scan_technique}.png"
 art_ports = "50032"
 
 def main():
-    scan_results: tuple[list[ScanModel], list[str]] = get_results(["END_ARTIFICIAL_PORT_RANGE", "SCANNING_TECHNIQUE", "BASE_IMAGE"], [art_ports, scan_technique, image], "scanning_technique")
+    scan_results: tuple[list[ScanModel], list[str]] = get_results(["BASE_IMAGE"], [image], "scanning_technique")
     # scan_results: tuple[list[ScanModel], list[str]] = get_results(["SCANNING_TECHNIQUE", "END_ARTIFICIAL_PORT_RANGE", "BASE_IMAGE"], [scan_technique, art_ports, image], "total_scan_time")
     # plot = get_plot_parallel_sockets(scan_results, filename)
-    plot = get_plot_efficacy(scan_results, filename, f"{op_sys} {browser} {scan_technique}")
-    # plot = get_table(scan_results, "table.png")
+    # plot = get_plot_efficacy(scan_results, filename, f"{op_sys} {browser} {scan_technique}")
+    plot = get_table(scan_results, "table.png")
     plot.show()
 
 

@@ -19,6 +19,7 @@ RUN choco install firefox -y
 RUN choco install git -y
 RUN choco install nodejs-lts -y
 RUN choco install openjdk -y
+RUN npm install -g ts-node
 # RUN powershell -Command Install-Package git -y
 # Install Chromedriver
 # ENV CHROMEDRIVER_VERSION 114.0.5735.90

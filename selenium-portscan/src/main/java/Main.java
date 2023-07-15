@@ -24,18 +24,24 @@ public class Main {
                 beginPort, endPort, nScans, parallelSockets, socketTimeout, scanningTechnique);
         System.out.println("Setting up selenium port scanner");
         System.setProperty("webdriver.chrome.logfile", "/app/chromedriver.log");
+        System.setProperty("webdriver.firefox.logfile", "/app/geckodriver.log");
         System.setProperty("webdriver.chrome.verboseLogging", "true");
         System.setProperty("webdriver.chrome.whitelistedIps", "");
         if(!containerName.equals("win-container")) {
             String chromeDriverPath = Paths.get("/opt/chromedriver").toAbsolutePath().toString();
             System.setProperty("webdriver.chrome.driver", chromeDriverPath);
+            String firefoxDriverPath = Paths.get("/opt/firefox/geckodriver").toAbsolutePath().toString();
+            System.setProperty("webdriver.gecko.driver", firefoxDriverPath);
         }
+
         // Create a new instance of the Chrome driver
 //        final ChromeOptions chromeOptions = new ChromeOptions();
 //        chromeOptions.addArguments("--headless", "--remote-allow-origins=*", "--ignore-ssl-errors=yes", "--ignore-certificate-errors");
 //        final WebDriver driver = new ChromeDriver(chromeOptions);
-        final  FirefoxOptions firefoxOptions = new FirefoxOptions();
-        firefoxOptions.addArguments("--headless", "--remote-allow-origins=*", "--ignore-ssl-errors=yes", "--ignore-certificate-errors");
+        final FirefoxOptions firefoxOptions = new FirefoxOptions();
+        firefoxOptions.addArguments("--headless=new");
+        firefoxOptions.addPreference("security.ssl.enable_ocsp_stapling", false);
+        firefoxOptions.addPreference("security.ssl.enable_ocsp_must_staple", false);
         final WebDriver driver = new FirefoxDriver();
         try {
             System.out.println("Starting port scanner");
