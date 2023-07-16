@@ -1,0 +1,4827 @@
+{
+  "beginPort": 49900,
+  "endPort": 50200,
+  "nScans": 1,
+  "nSockets": 50,
+  "socketTimeout": 200,
+  "scanningTechnique": "websocket",
+  "totalScanTime": 262,
+  "results": [
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49900,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.171Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.177Z",
+          "duration": 6,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49901,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.171Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.177Z",
+          "duration": 7,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49902,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.172Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.178Z",
+          "duration": 7,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49903,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.172Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.179Z",
+          "duration": 9,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49904,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.172Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.180Z",
+          "duration": 9,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49905,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.172Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.180Z",
+          "duration": 9,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49906,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.172Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.181Z",
+          "duration": 9,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49907,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.172Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.182Z",
+          "duration": 10,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49908,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.172Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.183Z",
+          "duration": 11,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49909,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.172Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.184Z",
+          "duration": 12,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49910,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.172Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.185Z",
+          "duration": 13,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49911,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.172Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.185Z",
+          "duration": 13,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49912,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.172Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.186Z",
+          "duration": 13,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49913,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.172Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.186Z",
+          "duration": 14,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49914,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.172Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.187Z",
+          "duration": 15,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49915,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.172Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.188Z",
+          "duration": 15,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49916,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.172Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.188Z",
+          "duration": 16,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49917,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.173Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.189Z",
+          "duration": 16,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49918,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.173Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.190Z",
+          "duration": 17,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49919,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.174Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.191Z",
+          "duration": 18,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49920,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.174Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.191Z",
+          "duration": 17,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49921,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.174Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.191Z",
+          "duration": 18,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49922,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.174Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.192Z",
+          "duration": 19,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49923,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.174Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.193Z",
+          "duration": 19,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49924,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.174Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.194Z",
+          "duration": 19,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49925,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.174Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.194Z",
+          "duration": 20,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49926,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.174Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.195Z",
+          "duration": 21,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49927,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.174Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.196Z",
+          "duration": 21,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49928,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.174Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.197Z",
+          "duration": 23,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49929,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.174Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.197Z",
+          "duration": 23,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49930,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.174Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.198Z",
+          "duration": 24,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49931,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.174Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.198Z",
+          "duration": 25,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49932,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.175Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.199Z",
+          "duration": 24,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49933,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.175Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.200Z",
+          "duration": 25,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49934,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.175Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.200Z",
+          "duration": 25,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49935,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.175Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.201Z",
+          "duration": 26,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49936,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.175Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.202Z",
+          "duration": 27,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49937,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.175Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.203Z",
+          "duration": 28,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49938,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.175Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.203Z",
+          "duration": 28,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49939,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.175Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.203Z",
+          "duration": 28,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49940,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.175Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.204Z",
+          "duration": 29,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49941,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.175Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.205Z",
+          "duration": 29,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49942,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.176Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.205Z",
+          "duration": 30,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49943,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.176Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.206Z",
+          "duration": 30,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49944,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.176Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.207Z",
+          "duration": 31,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49945,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.176Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.208Z",
+          "duration": 32,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49946,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.176Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.208Z",
+          "duration": 32,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49947,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.176Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.209Z",
+          "duration": 33,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49948,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.176Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.209Z",
+          "duration": 33,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49949,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.176Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.210Z",
+          "duration": 33,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49950,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.177Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.210Z",
+          "duration": 32,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49951,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.177Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.211Z",
+          "duration": 33,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49952,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.178Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.211Z",
+          "duration": 34,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49953,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.179Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.211Z",
+          "duration": 32,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49954,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.180Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.212Z",
+          "duration": 32,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49955,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.180Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.213Z",
+          "duration": 33,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49956,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.181Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.213Z",
+          "duration": 33,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49957,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.182Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.215Z",
+          "duration": 32,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49958,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.183Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.215Z",
+          "duration": 32,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49959,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.184Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.216Z",
+          "duration": 32,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49960,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.185Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.217Z",
+          "duration": 32,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49961,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.185Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.217Z",
+          "duration": 31,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49962,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.186Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.218Z",
+          "duration": 32,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49963,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.186Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.218Z",
+          "duration": 32,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49964,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.187Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.218Z",
+          "duration": 31,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49965,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.188Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.219Z",
+          "duration": 32,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49966,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.188Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.220Z",
+          "duration": 31,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49967,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.189Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.221Z",
+          "duration": 32,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49968,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.190Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.221Z",
+          "duration": 32,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49969,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.191Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.222Z",
+          "duration": 31,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49970,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.191Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.223Z",
+          "duration": 32,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49971,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.191Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.223Z",
+          "duration": 32,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49972,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.192Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.224Z",
+          "duration": 32,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49973,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.193Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.225Z",
+          "duration": 32,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49974,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.194Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.226Z",
+          "duration": 32,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49975,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.194Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.226Z",
+          "duration": 32,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49976,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.195Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.226Z",
+          "duration": 31,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49977,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.196Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.228Z",
+          "duration": 32,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49978,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.197Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.228Z",
+          "duration": 32,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49979,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.197Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.229Z",
+          "duration": 32,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49980,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.198Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.230Z",
+          "duration": 32,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49981,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.198Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.230Z",
+          "duration": 31,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49982,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.199Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.231Z",
+          "duration": 32,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49983,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.200Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.231Z",
+          "duration": 31,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49984,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.200Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.232Z",
+          "duration": 32,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49985,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.201Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.232Z",
+          "duration": 31,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49986,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.202Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.233Z",
+          "duration": 31,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49987,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.203Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.234Z",
+          "duration": 31,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49988,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.203Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.235Z",
+          "duration": 32,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49989,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.203Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.235Z",
+          "duration": 32,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49990,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.204Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.236Z",
+          "duration": 31,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49991,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.205Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.236Z",
+          "duration": 31,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49992,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.205Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.237Z",
+          "duration": 31,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49993,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.206Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.237Z",
+          "duration": 32,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49994,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.207Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.239Z",
+          "duration": 31,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49995,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.208Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.239Z",
+          "duration": 31,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49996,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.208Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.240Z",
+          "duration": 32,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49997,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.209Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.240Z",
+          "duration": 31,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49998,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.209Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.241Z",
+          "duration": 32,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 49999,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.210Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.242Z",
+          "duration": 31,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50000,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.210Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.247Z",
+          "duration": 37,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50001,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.211Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.249Z",
+          "duration": 38,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50002,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.211Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.251Z",
+          "duration": 39,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50003,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.211Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.252Z",
+          "duration": 40,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50004,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.212Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.253Z",
+          "duration": 40,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50005,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.213Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.254Z",
+          "duration": 41,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50006,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.213Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.256Z",
+          "duration": 42,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50007,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.215Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.257Z",
+          "duration": 43,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50008,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.215Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.259Z",
+          "duration": 44,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50009,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.216Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.260Z",
+          "duration": 44,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50010,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.217Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.261Z",
+          "duration": 44,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50011,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.217Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.262Z",
+          "duration": 45,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50012,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.218Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.262Z",
+          "duration": 45,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50013,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.218Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.264Z",
+          "duration": 45,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50014,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.218Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.265Z",
+          "duration": 46,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50015,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.219Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.266Z",
+          "duration": 46,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50016,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.220Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.267Z",
+          "duration": 48,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50017,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.221Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.269Z",
+          "duration": 48,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50018,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.221Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.271Z",
+          "duration": 48,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50019,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.222Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.271Z",
+          "duration": 49,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50020,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.223Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.272Z",
+          "duration": 49,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50021,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.223Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.274Z",
+          "duration": 49,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50022,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.224Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.274Z",
+          "duration": 49,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50023,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.225Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.275Z",
+          "duration": 50,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50024,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.226Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.276Z",
+          "duration": 52,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50025,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.226Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.277Z",
+          "duration": 52,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50026,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.226Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.279Z",
+          "duration": 52,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50027,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.228Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.280Z",
+          "duration": 53,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50028,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.228Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.281Z",
+          "duration": 52,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50029,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.229Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.282Z",
+          "duration": 53,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50030,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.230Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.283Z",
+          "duration": 53,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50031,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.230Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.284Z",
+          "duration": 55,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50032,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.231Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.286Z",
+          "duration": 55,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50033,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.231Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.287Z",
+          "duration": 56,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50034,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.232Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.288Z",
+          "duration": 56,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50035,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.232Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.290Z",
+          "duration": 58,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50036,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.233Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.291Z",
+          "duration": 58,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50037,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.234Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.292Z",
+          "duration": 58,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50038,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.235Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.293Z",
+          "duration": 58,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50039,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.235Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.294Z",
+          "duration": 58,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50040,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.236Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.295Z",
+          "duration": 59,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50041,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.236Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.296Z",
+          "duration": 60,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50042,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.237Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.297Z",
+          "duration": 60,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50043,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.237Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.298Z",
+          "duration": 60,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50044,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.239Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.300Z",
+          "duration": 61,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50045,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.239Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.300Z",
+          "duration": 62,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50046,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.240Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.301Z",
+          "duration": 62,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50047,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.240Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.304Z",
+          "duration": 63,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50048,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.241Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.305Z",
+          "duration": 64,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50049,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.242Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.306Z",
+          "duration": 65,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50050,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.247Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.308Z",
+          "duration": 60,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50051,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.249Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.309Z",
+          "duration": 60,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50052,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.251Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.310Z",
+          "duration": 59,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50053,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.252Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.311Z",
+          "duration": 59,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50054,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.253Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.312Z",
+          "duration": 59,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50055,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.254Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.313Z",
+          "duration": 59,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50056,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.256Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.315Z",
+          "duration": 58,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50057,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.257Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.315Z",
+          "duration": 59,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50058,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.259Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.317Z",
+          "duration": 58,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50059,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.260Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.318Z",
+          "duration": 58,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50060,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.261Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.320Z",
+          "duration": 59,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50061,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.262Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.322Z",
+          "duration": 60,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50062,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.262Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.323Z",
+          "duration": 60,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50063,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.264Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.324Z",
+          "duration": 60,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50064,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.265Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.326Z",
+          "duration": 61,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50065,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.266Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.326Z",
+          "duration": 61,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50066,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.267Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.328Z",
+          "duration": 60,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50067,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.269Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.330Z",
+          "duration": 61,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50068,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.271Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.332Z",
+          "duration": 62,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50069,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.271Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.333Z",
+          "duration": 62,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50070,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.272Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.334Z",
+          "duration": 62,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50071,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.274Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.334Z",
+          "duration": 62,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50072,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.274Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.336Z",
+          "duration": 62,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50073,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.275Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.337Z",
+          "duration": 62,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50074,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.276Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.338Z",
+          "duration": 61,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50075,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.277Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.340Z",
+          "duration": 62,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50076,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.279Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.341Z",
+          "duration": 63,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50077,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.280Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.342Z",
+          "duration": 62,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50078,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.281Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.343Z",
+          "duration": 62,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50079,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.282Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.344Z",
+          "duration": 62,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50080,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.283Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.345Z",
+          "duration": 62,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50081,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.284Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.347Z",
+          "duration": 61,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50082,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.286Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.347Z",
+          "duration": 62,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50083,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.287Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.348Z",
+          "duration": 62,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50084,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.288Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.350Z",
+          "duration": 62,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50085,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.290Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.351Z",
+          "duration": 61,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50086,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.291Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.352Z",
+          "duration": 61,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50087,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.292Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.354Z",
+          "duration": 62,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50088,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.293Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.355Z",
+          "duration": 62,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50089,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.294Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.356Z",
+          "duration": 62,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50090,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.295Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.357Z",
+          "duration": 62,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50091,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.296Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.358Z",
+          "duration": 63,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50092,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.297Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.359Z",
+          "duration": 63,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50093,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.298Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.360Z",
+          "duration": 61,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50094,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.300Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.362Z",
+          "duration": 61,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50095,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.300Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.363Z",
+          "duration": 62,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50096,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.301Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.364Z",
+          "duration": 62,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50097,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.304Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.365Z",
+          "duration": 62,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50098,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.305Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.366Z",
+          "duration": 61,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50099,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.306Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.367Z",
+          "duration": 61,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50100,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.308Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.367Z",
+          "duration": 61,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50101,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.309Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.367Z",
+          "duration": 59,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50102,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.310Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.369Z",
+          "duration": 58,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50103,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.311Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.369Z",
+          "duration": 58,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50104,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.312Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.369Z",
+          "duration": 57,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50105,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.313Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.370Z",
+          "duration": 57,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50106,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.315Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.372Z",
+          "duration": 57,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50107,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.315Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.372Z",
+          "duration": 55,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50108,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.317Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.373Z",
+          "duration": 55,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50109,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.318Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.374Z",
+          "duration": 54,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50110,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.320Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.374Z",
+          "duration": 53,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50111,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.322Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.374Z",
+          "duration": 52,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50112,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.323Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.375Z",
+          "duration": 52,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50113,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.324Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.376Z",
+          "duration": 52,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50114,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.326Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.377Z",
+          "duration": 51,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50115,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.326Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.378Z",
+          "duration": 51,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50116,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.328Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.379Z",
+          "duration": 51,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50117,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.330Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.379Z",
+          "duration": 49,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50118,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.332Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.380Z",
+          "duration": 48,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50119,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.333Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.381Z",
+          "duration": 48,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50120,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.334Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.381Z",
+          "duration": 47,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50121,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.334Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.382Z",
+          "duration": 47,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50122,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.336Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.383Z",
+          "duration": 47,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50123,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.337Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.383Z",
+          "duration": 47,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50124,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.338Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.384Z",
+          "duration": 46,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50125,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.340Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.385Z",
+          "duration": 45,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50126,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.341Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.386Z",
+          "duration": 45,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50127,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.342Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.387Z",
+          "duration": 45,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50128,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.343Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.389Z",
+          "duration": 46,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50129,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.344Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.390Z",
+          "duration": 46,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50130,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.345Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.390Z",
+          "duration": 45,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50131,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.347Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.390Z",
+          "duration": 45,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50132,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.347Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.391Z",
+          "duration": 43,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50133,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.348Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.392Z",
+          "duration": 43,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50134,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.350Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.392Z",
+          "duration": 42,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50135,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.351Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.393Z",
+          "duration": 42,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50136,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.352Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.393Z",
+          "duration": 42,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50137,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.354Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.394Z",
+          "duration": 40,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50138,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.355Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.395Z",
+          "duration": 40,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50139,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.356Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.396Z",
+          "duration": 39,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50140,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.357Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.396Z",
+          "duration": 39,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50141,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.358Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.397Z",
+          "duration": 38,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50142,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.359Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.398Z",
+          "duration": 38,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50143,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.360Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.398Z",
+          "duration": 38,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50144,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.362Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.404Z",
+          "duration": 42,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50145,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.363Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.404Z",
+          "duration": 40,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50146,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.364Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.404Z",
+          "duration": 40,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50147,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.365Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.405Z",
+          "duration": 39,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50148,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.366Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.405Z",
+          "duration": 38,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50149,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.367Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.405Z",
+          "duration": 37,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50150,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.367Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.405Z",
+          "duration": 36,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50151,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.367Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.405Z",
+          "duration": 37,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50152,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.369Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.406Z",
+          "duration": 37,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50153,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.369Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.406Z",
+          "duration": 37,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50154,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.370Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.406Z",
+          "duration": 38,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50155,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.370Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.407Z",
+          "duration": 38,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50156,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.372Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.408Z",
+          "duration": 37,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50157,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.372Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.408Z",
+          "duration": 38,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50158,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.373Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.409Z",
+          "duration": 37,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50159,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.374Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.409Z",
+          "duration": 36,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50160,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.374Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.410Z",
+          "duration": 36,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50161,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.374Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.410Z",
+          "duration": 36,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50162,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.375Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.411Z",
+          "duration": 36,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50163,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.376Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.411Z",
+          "duration": 36,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50164,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.377Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.412Z",
+          "duration": 35,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50165,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.378Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.412Z",
+          "duration": 34,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50166,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.379Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.413Z",
+          "duration": 34,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50167,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.379Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.413Z",
+          "duration": 34,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50168,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.380Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.414Z",
+          "duration": 34,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50169,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.381Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.415Z",
+          "duration": 33,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50170,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.381Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.415Z",
+          "duration": 33,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50171,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.382Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.416Z",
+          "duration": 34,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50172,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.383Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.416Z",
+          "duration": 33,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50173,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.383Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.417Z",
+          "duration": 33,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50174,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.384Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.417Z",
+          "duration": 34,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50175,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.385Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.419Z",
+          "duration": 34,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50176,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.386Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.419Z",
+          "duration": 33,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50177,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.387Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.419Z",
+          "duration": 32,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50178,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.389Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.419Z",
+          "duration": 31,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50179,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.390Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.420Z",
+          "duration": 30,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50180,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.390Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.420Z",
+          "duration": 30,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50181,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.390Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.421Z",
+          "duration": 30,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50182,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.391Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.421Z",
+          "duration": 31,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50183,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.392Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.422Z",
+          "duration": 30,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50184,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.392Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.423Z",
+          "duration": 31,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50185,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.393Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.423Z",
+          "duration": 30,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50186,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.393Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.423Z",
+          "duration": 29,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50187,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.394Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.424Z",
+          "duration": 30,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50188,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.395Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.425Z",
+          "duration": 30,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50189,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.396Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.425Z",
+          "duration": 30,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50190,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.396Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.425Z",
+          "duration": 30,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50191,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.397Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.426Z",
+          "duration": 29,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50192,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.398Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.427Z",
+          "duration": 29,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50193,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.398Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.428Z",
+          "duration": 29,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50194,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.404Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.429Z",
+          "duration": 26,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50195,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.404Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.429Z",
+          "duration": 25,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50196,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.404Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.430Z",
+          "duration": 26,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50197,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.405Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.431Z",
+          "duration": 27,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50198,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.405Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.431Z",
+          "duration": 28,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50199,
+          "status": "CLOSE"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.405Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.431Z",
+          "duration": 28,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ],
+    [
+      {
+        "port": {
+          "ipaddress": "127.0.0.1",
+          "number": 50200,
+          "status": "UNKNOWN"
+        },
+        "measurement": {
+          "startTimeOfScan": "2023-07-16T20:06:16.405Z",
+          "endTimeOfScan": "2023-07-16T20:06:16.432Z",
+          "duration": 29,
+          "timedOut": false,
+          "receivedData": false
+        }
+      }
+    ]
+  ]
+}

@@ -34,15 +34,14 @@ public class Main {
             System.setProperty("webdriver.gecko.driver", firefoxDriverPath);
         }
 
-        // Create a new instance of the Chrome driver
-//        final ChromeOptions chromeOptions = new ChromeOptions();
-//        chromeOptions.addArguments("--headless", "--remote-allow-origins=*", "--ignore-ssl-errors=yes", "--ignore-certificate-errors");
-//        final WebDriver driver = new ChromeDriver(chromeOptions);
-        final FirefoxOptions firefoxOptions = new FirefoxOptions();
-        firefoxOptions.addArguments("--headless=new");
-        firefoxOptions.addPreference("security.ssl.enable_ocsp_stapling", false);
-        firefoxOptions.addPreference("security.ssl.enable_ocsp_must_staple", false);
-        final WebDriver driver = new FirefoxDriver();
+        final ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--headless", "--remote-allow-origins=*", "--ignore-ssl-errors=yes", "--ignore-certificate-errors");
+        final WebDriver driver = new ChromeDriver(chromeOptions);
+//        final FirefoxOptions firefoxOptions = new FirefoxOptions();
+//        firefoxOptions.addArguments("--headless=new");
+//        firefoxOptions.addPreference("security.ssl.enable_ocsp_stapling", false);
+//        firefoxOptions.addPreference("security.ssl.enable_ocsp_must_staple", false);
+//        final WebDriver driver = new FirefoxDriver();
         try {
             System.out.println("Starting port scanner");
             final String url = String.format("http://localhost:3001/?begin_port=%s&end_port=%s&n_scans=%s&n_sockets=%s&socket_timeout=%s&scanning_technique=%s",
