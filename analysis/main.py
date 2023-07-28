@@ -6,22 +6,24 @@ from plot.plot import get_plot_efficacy, get_plot_parallel_sockets
 from models.scanmodel import ScanModel
 from util.utils import read_file, get_results_dir
 
-scan_results_directory = "scan-results"
+scan_results_directory = "scan-results/efficacy/firefox"
 op_sys = "Windows"
 browser = "Firefox"
 image = "mcr.microsoft.com/windows:20H2-amd64"
 # image = "library/ubuntu:22.04"
 plot_type = "efficacy"
-scan_technique = "Websocket"
+scan_technique = "XHR"
 filename = f"{plot_type}/{op_sys}_{browser}_{plot_type}_{scan_technique}.png"
-art_ports = "50032"
+art_ports = "50099"
+dockerfile = "Dockerfile.windows-firefox"
 
 def main():
-    scan_results: tuple[list[ScanModel], list[str]] = get_results(["BASE_IMAGE"], [image], "scanning_technique")
-    # scan_results: tuple[list[ScanModel], list[str]] = get_results(["SCANNING_TECHNIQUE", "END_ARTIFICIAL_PORT_RANGE", "BASE_IMAGE"], [scan_technique, art_ports, image], "total_scan_time")
+    # scan_results: tuple[list[ScanModel], list[str]] = get_results(["BASE_IMAGE"], [image], "scanning_technique")
+    scan_results: tuple[list[ScanModel], list[str]] = get_results(["BASE_IMAGE", "SCANNING_TECHNIQUE", "END_ARTIFICIAL_PORT_RANGE"], [image, scan_technique, art_ports], "total_scan_time")
+    # scan_results: tuple[list[ScanModel], list[str]] = get_results(["SCANNING_TECHNIQUE", "END_ARTIFICIAL_PORT_RANGE"], [scan_technique, art_ports], "total_scan_time")
     # plot = get_plot_parallel_sockets(scan_results, filename)
-    # plot = get_plot_efficacy(scan_results, filename, f"{op_sys} {browser} {scan_technique}")
-    plot = get_table(scan_results, "table.png")
+    plot = get_plot_efficacy(scan_results, filename, f"{op_sys} {browser} {scan_technique}")
+    # plot = get_table(scan_results, "table.png")
     plot.show()
 
 
@@ -41,7 +43,7 @@ def get_results(filter_properties: [], filter_values: [], sort_key: str):
                 if separator in line:
                     key, value = line.split(separator)
                     for index, metadata_property in enumerate(filter_properties):
-                        if key == metadata_property and value == filter_values[index].lower():
+                        if key == metadata_property and value.lower() == filter_values[index].lower():
                             properties_found.add(metadata_property)
             if len(properties_found) == len(filter_properties):
                 results.append(ScanModel(**json.loads(results_content)))
