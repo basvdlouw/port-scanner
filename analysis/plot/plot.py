@@ -64,9 +64,9 @@ def get_plot_efficacy(data: tuple[list[ScanModel], list[str]], filename: str, ti
 
     for index, z in enumerate(x):
         if colors[index] == "green":
-            plt.hist(z, bins=10, alpha=0.7, color=colors[index], label="Open port")
+            plt.hist(z, bins=10, alpha=1.0, edgecolor=colors[index], color=colors[index], label="Open port")
         else:
-            plt.hist(z, bins=10, alpha=0.7, color=colors[index], label="Closed port")
+            plt.hist(z, bins=10, alpha=1.0, edgecolor=colors[index], color=colors[index], label="Closed port")
     # ax.hist(x, bins=10, edgecolor='black')
 
     ax.set_xlabel('Duration (ms)')
@@ -76,5 +76,5 @@ def get_plot_efficacy(data: tuple[list[ScanModel], list[str]], filename: str, ti
     handles, labels = plt.gca().get_legend_handles_labels()
     by_label = OrderedDict(zip(labels, handles))
     plt.legend(by_label.values(), by_label.keys())
-    plt.savefig(f"figs/{filename}", dpi=300)
+    plt.savefig(f"figs/{filename}", dpi=500)
     return plt

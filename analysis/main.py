@@ -6,16 +6,18 @@ from plot.plot import get_plot_efficacy, get_plot_parallel_sockets
 from models.scanmodel import ScanModel
 from util.utils import read_file, get_results_dir
 
-scan_results_directory = "scan-results/efficacy/firefox"
+# scan_results_directory = "scan-results/efficacy/firefox"
+# browser = "Firefox"
+scan_results_directory = "scan-results/efficacy/chrome"
+browser = "Chrome"
 op_sys = "Windows"
-browser = "Firefox"
+# op_sys = "Ubuntu"
 image = "mcr.microsoft.com/windows:20H2-amd64"
 # image = "library/ubuntu:22.04"
 plot_type = "efficacy"
-scan_technique = "XHR"
-filename = f"{plot_type}/{op_sys}_{browser}_{plot_type}_{scan_technique}.png"
+scan_technique = "WebSocket"
+filename = f"{plot_type}/{op_sys.lower()}_{browser.lower()}_{plot_type}_{scan_technique}.png"
 art_ports = "50099"
-dockerfile = "Dockerfile.windows-firefox"
 
 def main():
     # scan_results: tuple[list[ScanModel], list[str]] = get_results(["BASE_IMAGE"], [image], "scanning_technique")
