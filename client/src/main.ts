@@ -5,6 +5,7 @@ import { getQueryParameter, getScanAPI, portRangeIsValid } from "./utils.js";
 import { analyzePort } from "./port-scanner.js";
 import { ResultsStore } from "./results-store.js";
 import { ScanResult } from "./models/scan-result.js";
+import { analyzePostScanResults } from "./post-scan-analysis.js";
 
 const beginPort = parseInt(getQueryParameter("begin_port"));
 const endPort = parseInt(getQueryParameter("end_port"));
@@ -77,6 +78,7 @@ startPortScanner?.addEventListener("click", function handleClick() {
         console.log(data.message);
 
         document.getElementById("finished")?.classList.remove("hidden");
+        analyzePostScanResults(resultsStore, socketTimeout);
       } catch (error) {
         console.error("Error:", error);
       }
