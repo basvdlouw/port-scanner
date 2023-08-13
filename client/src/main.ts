@@ -78,10 +78,10 @@ startPortScanner?.addEventListener("click", function handleClick() {
         console.log(data.message);
 
         document.getElementById("finished")?.classList.remove("hidden");
-        analyzePostScanResults(resultsStore, socketTimeout);
       } catch (error) {
         console.error("Error:", error);
       }
+      analyzePostScanResults(resultsStore, socketTimeout);
     })
     .catch((error) => {
       console.error(error);
