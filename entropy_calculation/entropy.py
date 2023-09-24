@@ -31,9 +31,6 @@ for scan in scans:
         # If the scan is 0, there are no open ports identified during the scan
         identified_open_ports.append(set())
 
-# Create a list of all unique ports detected across all scans
-combined_ports = [port for ports_combination in identified_open_ports for port in ports_combination]
-
 # Calculate the joint probability distribution of unique port combinations
 joint_probability_distribution = Counter(tuple(combination) for combination in identified_open_ports)
 
