@@ -1,60 +1,60 @@
+from itertools import permutations
+
 import numpy as np
-from collections import Counter
-from scipy.stats import norm
+from scipy.stats import entropy, norm, expon
 
 # Parameters
 mu = 10  # Mean of the normal distribution for scan results
 sigma = 5  # Standard deviation of the normal distribution for scan results
-num_scans = 10  # Number of simulated scans
+num_scans = 2000000  # Number of simulated scans
 exp_parameter = 200  # Decay parameter for the exponential distribution
-num_ports = 1000  # Number of ports being scanned
+num_ports = 1000  # Number of ports being scanne
 
-# Simulate scans with a normal distribution
-scans = np.random.normal(mu, sigma, num_scans)
 
-# Initialize a list to store identified open ports in each scan
-identified_open_ports = []
+def sample_amount_ports_open():
+    samples = np.random.normal(mu, sigma, num_scans)
+    number_of_ports_open = []
+    for sample in samples:
+        if sample <= 0:
+            number_of_ports_open.append(0)
+        else:
+            number_of_ports_open.append(round(sample))
+    return number_of_ports_open
 
-# Simulate the identification of open ports in each scan
-for scan in scans:
-    if scan > 0:
-        # Round the scan result to the nearest whole number to represent the number of open ports
-        x = round(scan)
 
-        # Define probabilities for selecting ports using an exponential distribution
-        port_probabilities = np.exp(-np.arange(num_ports + 1) / exp_parameter)
+def sample_ports_open(number_of_ports_open):
+    identified_ports_array = []
 
-        # Randomly select open ports based on the defined probabilities
-        selected_ports = np.random.choice(num_ports + 1, x, replace=False, p=port_probabilities / port_probabilities.sum())
+    for ports_open in number_of_ports_open:
+        if ports_open == 0:
+            identified_ports_array.append([])
+        else:
+            ports = np.random.exponential(exp_parameter, ports_open)
+            port_array = []
+            for port in ports:
+                port_array.append(round(port))
+            identified_ports_array.append(port_array)
 
-        # Add the selected open ports to the list
-        identified_open_ports.append(set(selected_ports))
-    else:
-        # If the scan result is non-positive, there are no open ports in this scan
-        identified_open_ports.append(set([]))
+    return identified_ports_array
 
-# Initialize a variable to store the total entropy
-total_entropy = 0.0
 
-# Calculate the entropy for each set of possible open ports
-for ports in identified_open_ports:
-    if len(ports) > 0:  # Check if the list is not empty
-        # Calculate the probability distribution for this set of ports based on the exponential distribution
-        port_probs = np.exp(-np.arange(num_ports + 1) / exp_parameter)
-        port_probs /= port_probs.sum()  # Normalize the probabilities
+def probability_of_number(number):
+    return norm.cdf(number+0.49, loc=mu, scale=sigma) - norm.cdf(number-0.5, loc=mu, scale=sigma)
 
-        # Calculate entropy using the probability distribution for open ports
-        entropy_open_ports = -np.sum([p * np.log2(p) if p > 0 else 0 for p in port_probs])
 
-        # Calculate entropy using the probability distribution for scan results
-        entropy_scan_results = -np.log2(norm.pdf(scans[identified_open_ports.index(ports)], loc=mu, scale=sigma))
+def probability_of_port(port):
+    return expon.cdf(port+0.49, scale=1 / exp_parameter) - expon.cdf(port-0.5, scale=1 / exp_parameter)
 
-        # Combine both entropies
-        combined_entropy = entropy_open_ports + entropy_scan_results
 
-        # Add to the total entropy
-        total_entropy += combined_entropy
-# Calculate the average entropy
-average_entropy = total_entropy / num_scans
+def array_of_ports_probability(port_array):
+    probability = probability_of_number(len(port_array))
+    for port in port_array:
+        probability *= probability_of_port(port)
+    return probability
 
-print("Average Entropy:", average_entropy)
+
+if __name__ == '__main__':
+    ports_open_number = sample_amount_ports_open()
+    ports_open = sample_ports_open(ports_open_number)
+
+    print(ports_open)
