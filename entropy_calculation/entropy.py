@@ -49,7 +49,7 @@ for ports in identified_open_ports:
         # Calculate entropy using the probability distribution for scan results
         entropy_scan_results = -np.log2(norm.pdf(scans[identified_open_ports.index(ports)], loc=mu, scale=sigma))
 
-        # Combine both entropies (you can choose how to combine them, e.g., sum, average, etc.)
+        # Combine both entropies
         combined_entropy = entropy_open_ports + entropy_scan_results
 
         # Add to the total entropy
