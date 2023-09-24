@@ -1,13 +1,13 @@
 import numpy as np
 from collections import Counter
+from scipy.stats import norm
 
 # Parameters
 mu = 10  # Mean of the normal distribution for scan results
 sigma = 5  # Standard deviation of the normal distribution for scan results
-num_scans = 100000  # Number of simulated scans
+num_scans = 10  # Number of simulated scans
 exp_parameter = 200  # Decay parameter for the exponential distribution
 num_ports = 1000  # Number of ports being scanned
-epsilon = 1e-10  # Small non-zero value to replace zero probabilities
 
 # Simulate scans with a normal distribution
 scans = np.random.normal(mu, sigma, num_scans)
@@ -28,37 +28,33 @@ for scan in scans:
         selected_ports = np.random.choice(num_ports + 1, x, replace=False, p=port_probabilities / port_probabilities.sum())
 
         # Add the selected open ports to the list
-        identified_open_ports.append(selected_ports)
+        identified_open_ports.append(set(selected_ports))
     else:
         # If the scan result is non-positive, there are no open ports in this scan
-        identified_open_ports.append([])
+        identified_open_ports.append(set([]))
 
-# Calculate the distribution of ports across all sets (excluding the current set)
-total_port_counts = Counter()
-for i in range(len(identified_open_ports)):
-    total_port_counts.update(identified_open_ports[i])
+# Initialize a variable to store the total entropy
+total_entropy = 0.0
 
-# Calculate the entropy for each set of identified open ports based on the distribution of ports across all sets
-entropies = []
-for i in range(len(identified_open_ports)):
-    current_set = set(identified_open_ports[i])
+# Calculate the entropy for each set of possible open ports
+for ports in identified_open_ports:
+    if len(ports) > 0:  # Check if the list is not empty
+        # Calculate the probability distribution for this set of ports based on the exponential distribution
+        port_probs = np.exp(-np.arange(num_ports + 1) / exp_parameter)
+        port_probs /= port_probs.sum()  # Normalize the probabilities
 
-    # Subtract the current set from total_port_counts
-    total_port_counts.subtract(current_set)
+        # Calculate entropy using the probability distribution for open ports
+        entropy_open_ports = -np.sum([p * np.log2(p) if p > 0 else 0 for p in port_probs])
 
-    total_ports = len(identified_open_ports) - 1  # Excluding the current set
-    port_probabilities = [count / total_ports if count > 0 else epsilon for count in total_port_counts.values()]
+        # Calculate entropy using the probability distribution for scan results
+        entropy_scan_results = -np.log2(norm.pdf(scans[identified_open_ports.index(ports)], loc=mu, scale=sigma))
 
-    # Calculate the entropy of the current set relative to the others
-    entropy = -sum(p * np.log2(p) for p in port_probabilities if p > 0)  # Exclude zero probabilities
-    entropies.append(entropy)
+        # Combine both entropies (you can choose how to combine them, e.g., sum, average, etc.)
+        combined_entropy = entropy_open_ports + entropy_scan_results
 
-# Calculate the average entropy for a set of identified open ports
-average_entropy = sum(entropies) / len(entropies)
+        # Add to the total entropy
+        total_entropy += combined_entropy
+# Calculate the average entropy
+average_entropy = total_entropy / num_scans
 
-# Print the calculated entropies for each set
-for i, entropy in enumerate(entropies):
-    print(f"Entropy for Set {i + 1}: {entropy:.4f}")
-
-# Print the average entropy
-print(f"Average Entropy for Sets of Identified Open Ports: {average_entropy:.4f}")
+print("Average Entropy:", average_entropy)
