@@ -36,14 +36,12 @@ def shannon_entropy(open_ports_combination: array):
     probability_n_of_ports = poisson.pmf(len(open_ports_combination), average_open_ports)
 
     # Calculate probability distribution for combination of open ports based on geometric distribution
-    probability_port_combinations = 1.0  # Initialize with 1.0 as we'll multiply probabilities
+    probability_port_combinations = 1.0
 
     for port in open_ports_combination:
         # Calculate the probability of each port being selected using the Geometric distribution
         port_probability = geom.pmf(port - 1, success_prob)
         probability_port_combinations *= port_probability
-
-    entropy = 0
 
     entropy = - (probability_n_of_ports * log2(probability_n_of_ports) +
                  probability_port_combinations * log2(probability_port_combinations))
