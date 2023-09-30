@@ -1,60 +1,82 @@
-from itertools import permutations
+from array import array
 
 import numpy as np
-from scipy.stats import entropy, norm, expon
+from scipy.stats import poisson, geom
+from math import log2
 
-# Parameters
-mu = 10  # Mean of the normal distribution for scan results
-sigma = 5  # Standard deviation of the normal distribution for scan results
-num_scans = 2000000  # Number of simulated scans
-exp_parameter = 200  # Decay parameter for the exponential distribution
-num_ports = 1000  # Number of ports being scanne
+# Define Parameters
+num_scans = 1  # Number of port scans
+num_ports = 1000  # Total number of ports to scan
+average_open_ports = 5  # Average number of open ports per scan
+success_prob = average_open_ports / num_ports  # Probability of finding an open port in a single scan
 
+# Generate Monte Carlo Simulations
+detected_open_ports_combinations = []
 
-def sample_amount_ports_open():
-    samples = np.random.normal(mu, sigma, num_scans)
-    number_of_ports_open = []
-    for sample in samples:
-        if sample <= 0:
-            number_of_ports_open.append(0)
-        else:
-            number_of_ports_open.append(round(sample))
-    return number_of_ports_open
+for _ in range(num_scans):
+    # Simulate the number of open ports using Poisson distribution
+    num_open_ports = poisson.rvs(average_open_ports)
 
+    # Simulate which ports are open using Geometric distribution
+    unnormalized_probabilities = [geom.pmf(i, success_prob) for i in range(1, num_ports + 1)]
+    normalized_probabilities = [p / sum(unnormalized_probabilities) for p in unnormalized_probabilities]
+    open_ports = np.random.choice(
+        num_ports,
+        size=num_open_ports,
+        replace=False,
+        p=normalized_probabilities
+    )
 
-def sample_ports_open(number_of_ports_open):
-    identified_ports_array = []
-
-    for ports_open in number_of_ports_open:
-        if ports_open == 0:
-            identified_ports_array.append([])
-        else:
-            ports = np.random.exponential(exp_parameter, ports_open)
-            port_array = []
-            for port in ports:
-                port_array.append(round(port))
-            identified_ports_array.append(port_array)
-
-    return identified_ports_array
+    detected_open_ports_combinations.append(open_ports)
 
 
-def probability_of_number(number):
-    return norm.cdf(number+0.49, loc=mu, scale=sigma) - norm.cdf(number-0.5, loc=mu, scale=sigma)
+# Calculate Shannon's Entropy
+def shannon_entropy(open_ports_combination: array):
+    # Calculate probability distribution for combination of open ports based on poisson distribution
+    probability_n_of_ports = poisson.pmf(len(open_ports_combination), average_open_ports)
+
+    # Calculate probability distribution for combination of open ports based on geometric distribution
+    probability_port_combinations = 1.0  # Initialize with 1.0 as we'll multiply probabilities
+
+    for port in open_ports_combination:
+        # Calculate the probability of each port being selected using the Geometric distribution
+        port_probability = geom.pmf(port - 1, success_prob)
+        probability_port_combinations *= port_probability
+
+    entropy = 0
+
+    entropy = - (probability_n_of_ports * log2(probability_n_of_ports + 1e-10) +
+                 probability_port_combinations * log2(probability_port_combinations))
+    return entropy
 
 
-def probability_of_port(port):
-    return expon.cdf(port+0.49, scale=1 / exp_parameter) - expon.cdf(port-0.5, scale=1 / exp_parameter)
+entropies = [shannon_entropy(open_ports) for open_ports in detected_open_ports_combinations]
 
+# # Plot Histogram of Entropy
+# plt.hist(entropies, bins=20, alpha=0.75, edgecolor='k')
+# plt.xlabel('Shannon Entropy')
+# plt.ylabel('Frequency')
+# plt.title('Distribution of Shannon Entropy')
+# plt.grid(True)
+# plt.show()
 
-def array_of_ports_probability(port_array):
-    probability = probability_of_number(len(port_array))
-    for port in port_array:
-        probability *= probability_of_port(port)
-    return probability
+# Plot Poisson Distribution
+# x = np.arange(0, 15)
+# pmf = poisson.pmf(x, average_open_ports)
+# plt.bar(x, pmf, align='center', alpha=0.75, edgecolor='k')
+# plt.xlabel('Number of Open Ports')
+# plt.ylabel('Probability')
+# plt.title('Poisson Distribution for Number of Open Ports')
+# plt.grid(True)
+# plt.show()
 
-
-if __name__ == '__main__':
-    ports_open_number = sample_amount_ports_open()
-    ports_open = sample_ports_open(ports_open_number)
-
-    print(ports_open)
+# Plot Geometric Distribution
+# x = np.arange(1, num_ports + 1)
+# pmf = geom.pmf(x, success_prob)
+# normalized_pmf = [p / sum(pmf) for p in pmf]
+# plt.bar(x, normalized_pmf, align='center', alpha=0.75, edgecolor='k')
+# plt.xlabel('Port Number')
+# plt.ylabel('Probability')
+# plt.title('Geometric Distribution for Port Selection')
+# plt.grid(True)
+# plt.show()
