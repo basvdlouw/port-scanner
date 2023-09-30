@@ -1,11 +1,12 @@
 from array import array
 
 import numpy as np
+from matplotlib import pyplot as plt
 from scipy.stats import poisson, geom
 from math import log2
 
 # Define Parameters
-num_scans = 1  # Number of port scans
+num_scans = 100  # Number of port scans
 num_ports = 1000  # Total number of ports to scan
 average_open_ports = 5  # Average number of open ports per scan
 success_prob = average_open_ports / num_ports  # Probability of finding an open port in a single scan
@@ -43,20 +44,20 @@ def shannon_entropy(open_ports_combination: array):
         port_probability = geom.pmf(port - 1, success_prob)
         probability_port_combinations *= port_probability
 
-    entropy = - (probability_n_of_ports * log2(probability_n_of_ports) +
-                 probability_port_combinations * log2(probability_port_combinations))
+    entropy = - (probability_n_of_ports * log2(probability_n_of_ports + 1e-10) +
+                 probability_port_combinations * log2(probability_port_combinations + 1e-10))
     return entropy
 
 
 entropies = [shannon_entropy(open_ports) for open_ports in detected_open_ports_combinations]
 
-# # Plot Histogram of Entropy
-# plt.hist(entropies, bins=20, alpha=0.75, edgecolor='k')
-# plt.xlabel('Shannon Entropy')
-# plt.ylabel('Frequency')
-# plt.title('Distribution of Shannon Entropy')
-# plt.grid(True)
-# plt.show()
+# Plot Histogram of Entropy
+plt.hist(entropies, bins=20, alpha=0.75, edgecolor='k')
+plt.xlabel('Shannon Entropy')
+plt.ylabel('Frequency')
+plt.title('Distribution of Shannon Entropy')
+plt.grid(True)
+plt.show()
 
 # Plot Poisson Distribution
 # x = np.arange(0, 15)
@@ -68,7 +69,7 @@ entropies = [shannon_entropy(open_ports) for open_ports in detected_open_ports_c
 # plt.grid(True)
 # plt.show()
 
-# Plot Geometric Distribution
+# # Plot Geometric Distribution
 # x = np.arange(1, num_ports + 1)
 # pmf = geom.pmf(x, success_prob)
 # normalized_pmf = [p / sum(pmf) for p in pmf]
