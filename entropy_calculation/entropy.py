@@ -6,7 +6,7 @@ from scipy.stats import poisson, geom
 from math import log2
 
 # Define Parameters
-num_scans = 100  # Number of port scans
+num_scans = 1000  # Number of port scans
 num_ports = 1000  # Total number of ports to scan
 average_open_ports = 5  # Average number of open ports per scan
 success_prob = average_open_ports / num_ports  # Probability of finding an open port in a single scan
@@ -44,8 +44,9 @@ def shannon_entropy(open_ports_combination: array):
         port_probability = geom.pmf(port - 1, success_prob)
         probability_port_combinations *= port_probability
 
-    entropy = - (probability_n_of_ports * log2(probability_n_of_ports + 1e-10) +
-                 probability_port_combinations * log2(probability_port_combinations + 1e-10))
+    combined_probability = probability_n_of_ports * probability_port_combinations
+    entropy = -np.sum(combined_probability * np.log2(combined_probability))
+
     return entropy
 
 
