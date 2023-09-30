@@ -45,7 +45,7 @@ def shannon_entropy(open_ports_combination: array):
 
     entropy = 0
 
-    entropy = - (probability_n_of_ports * log2(probability_n_of_ports + 1e-10) +
+    entropy = - (probability_n_of_ports * log2(probability_n_of_ports) +
                  probability_port_combinations * log2(probability_port_combinations))
     return entropy
 
