@@ -2,11 +2,11 @@ from array import array
 
 import numpy as np
 from matplotlib import pyplot as plt
-from scipy.stats import poisson, geom
+from scipy.stats import geom
 
 # Define Parameters
-num_scans = 10  # Number of port scans
-num_ports = 60000  # Total number of ports to scan
+num_scans = 100  # Number of port scans
+num_ports = 1000  # Total number of ports to scan
 average_open_ports = 5  # Average number of open ports per scan
 success_prob = average_open_ports / num_ports  # Probability of finding an open port in a single scan
 
@@ -21,45 +21,49 @@ unnormalized_probabilities = [geom.pmf(i, success_prob) for i in range(1, num_po
 geometric_distribution_normalized_probabilities = [p / sum(unnormalized_probabilities) for p in
                                                    unnormalized_probabilities]
 
-for _ in range(num_scans):
-    # Simulate the number of open ports using Poisson distribution
-    num_open_ports = poisson.rvs(average_open_ports)
-
-    open_ports = np.random.choice(
-        num_ports,
-        size=num_open_ports,
-        replace=False,
-        p=geometric_distribution_normalized_probabilities
-    )
-    detected_open_ports_combinations.append(open_ports)
+# for _ in range(num_scans):
+#     # Simulate the number of open ports using Poisson distribution
+#     num_open_ports = poisson.rvs(average_open_ports)
+#
+#     if num_open_ports > num_ports:
+#         num_open_ports = num_ports
+#     open_ports = np.random.choice(
+#         num_ports,
+#         size=num_open_ports,
+#         replace=False,
+#         p=geometric_distribution_normalized_probabilities
+#     )
+#     detected_open_ports_combinations.append(open_ports)
 
 
 # Calculate Shannon's Entropy
-def shannon_entropy(open_ports_combination: array):
+# def shannon_entropy(open_ports_combination):
+#     num_open_ports = len(open_ports_combination)
+#
+#     if num_open_ports == 0:
+#         return 0.0  # Entropy is 0 if there are no open ports in this combination.
+#
+#     # Calculate the probability of each port being open based on the geometric distribution
+#     port_probabilities = [geometric_distribution_normalized_probabilities[port] for port in open_ports_combination]
+#
+#     # Calculate the entropy based on the array of open ports
+#     entropy = -np.sum(port_probabilities * np.log2(port_probabilities))
+#
+#     return entropy
+#
+#
+# entropies = [shannon_entropy(open_ports) for open_ports in detected_open_ports_combinations]
 
-    # Calculate probability distribution for combination of open ports based on geometric distribution
-    port_probabilities = []
+entropy = -np.sum(geometric_distribution_normalized_probabilities * np.log2(geometric_distribution_normalized_probabilities))
+print("Entropy:", entropy)
 
-    for port in open_ports_combination:
-        # Calculate the probability of each port being selected using the Geometric distribution
-        port_probability = geometric_distribution_normalized_probabilities[port]
-        port_probabilities.append(port_probability)
-
-    # Calculate the entropy based on the array of open ports
-    H = -np.sum(port_probabilities * np.log2(port_probabilities))
-
-    return H
-
-
-entropies = [shannon_entropy(open_ports) for open_ports in detected_open_ports_combinations]
-
-# Plot Histogram of Entropy
-plt.hist(entropies, bins=20, alpha=0.75, edgecolor='k')
-plt.xlabel('Shannon Entropy')
-plt.ylabel('Frequency')
-plt.title('Distribution of Shannon Entropy')
-plt.grid(True)
-plt.show()
+# # Plot Histogram of Entropy
+# plt.hist(entropies, bins=20, alpha=0.75, edgecolor='k')
+# plt.xlabel('Shannon Entropy')
+# plt.ylabel('Frequency')
+# plt.title('Distribution of Shannon Entropy')
+# plt.grid(True)
+# plt.show()
 
 exit()
 
