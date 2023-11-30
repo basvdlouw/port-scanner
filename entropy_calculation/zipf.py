@@ -20,6 +20,7 @@ print("Entropy:", entropy)
 plt.bar(k_values, zipf_distribution_normalized_probabilities, align='center')
 plt.xlabel('Port Detected as Open')
 plt.ylabel('Probability')
+plt.margins(y=0.6)  # Adjust vertical margin
 plt.title('Zipf Distribution (s = ' + str(round(s, 2)) + ")")
 plt.savefig("zipf_distribution_10000")
 plt.show()
