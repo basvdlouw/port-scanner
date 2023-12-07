@@ -3,6 +3,7 @@
 [Port Scanner](https://basvdlouw.github.io/port-scanner/)
 
 # Example request
+
 https://basvdlouw.github.io/port-scanner/?begin_port=1&end_port=65000&n_scans=1&n_sockets=100&socket_timeout=150&scanning_technique=fetch
 
 # Port Scanner
@@ -39,8 +40,3 @@ npm start
 ```
 
 Builds and serves the application on `http://localhost:3000`.
-
-
-# Initial results
-
-Several applications detected using Windows 11 and Chrome 111. Application is not tested/optimized for other configurations.
