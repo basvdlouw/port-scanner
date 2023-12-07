@@ -1,14 +1,27 @@
 [![GitHub Pages Deployment](https://github.com/Basvdlouw/port-scanner/actions/workflows/jekyll-gh-pages.yml/badge.svg)](https://github.com/Basvdlouw/port-scanner/actions/workflows/jekyll-gh-pages.yml)
 
-[Port Scanner](https://basvdlouw.github.io/port-scanner/)
-
-# Example request
-
-https://basvdlouw.github.io/port-scanner/?begin_port=1&end_port=65000&n_scans=1&n_sockets=100&socket_timeout=150&scanning_technique=fetch
-
 # Port Scanner
 
-Application for performing browser-based port scanning using different JavaScript APIs
+Simple [website](https://basvdlouw.github.io/port-scanner/) for performing browser-based port scanning using different JavaScript APIs. Query parameters are available to configure the type of scan to execute. Code designed for experiments during master's [thesis](https://github.com/basvdlouw/master-thesis)
+
+## Available Query Parameters
+
+| Query Parameter    | Value                           | Description                                                                  |
+| ------------------ | ------------------------------- | ---------------------------------------------------------------------------- |
+| begin_port         | int (>= 0 and <= end_port)      | First port to scan                                                           |
+| end_port           | int (> begin_port and <= 65535) | Last port to scan, all ports between begin_port and end_port will be scanned |
+| n_scans            | int                             | N of scans on each individual port                                           |
+| n_sockets          | int                             | N of parallel connections                                                    |
+| socket_timeout     | int                             | Timeout of each scan on a port                                               |
+| scanning_technique | fetch, xhr, websocket           | Scanning technique to use                                                    |
+
+### Request Format
+
+https://basvdlouw.github.io/port-scanner/?begin_port={int}&end_port={int}&n_scans={int}&n_sockets={int}&socket_timeout={int}&scanning_technique={str}
+
+### Example Request
+
+https://basvdlouw.github.io/port-scanner/?begin_port=1&end_port=65000&n_scans=1&n_sockets=100&socket_timeout=150&scanning_technique=fetch
 
 # Project structure
 
