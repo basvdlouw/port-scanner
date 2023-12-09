@@ -81,7 +81,7 @@ startPortScanner?.addEventListener("click", function handleClick() {
       } catch (error) {
         console.error("Error:", error);
       }
-      analyzePostScanResults(resultsStore, socketTimeout);
+      // analyzePostScanResults(resultsStore, socketTimeout);
     })
     .catch((error) => {
       console.error(error);
