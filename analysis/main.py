@@ -17,12 +17,13 @@ image = "mcr.microsoft.com/windows:20H2-amd64"
 plot_type = "efficacy"
 scan_technique = "WebSocket"
 filename = f"{plot_type}/{op_sys.lower()}_{browser.lower()}_{plot_type}_{scan_technique}.png"
-art_ports = "50099"
+begin_art_ports = "50000"
+end_art_ports = "50099"
+filter = ["BASE_IMAGE", "SCANNING_TECHNIQUE", "BEGIN_ARTIFICIAL_PORT_RANGE", "END_ARTIFICIAL_PORT_RANGE"]
+filter_values = [image, scan_technique, begin_art_ports, end_art_ports]
 
 def main():
-    # scan_results: tuple[list[ScanModel], list[str]] = get_results(["BASE_IMAGE"], [image], "scanning_technique")
-    scan_results: tuple[list[ScanModel], list[str]] = get_results(["BASE_IMAGE", "SCANNING_TECHNIQUE", "END_ARTIFICIAL_PORT_RANGE"], [image, scan_technique, art_ports], "total_scan_time")
-    # scan_results: tuple[list[ScanModel], list[str]] = get_results(["SCANNING_TECHNIQUE", "END_ARTIFICIAL_PORT_RANGE"], [scan_technique, art_ports], "total_scan_time")
+    scan_results: tuple[list[ScanModel], list[str]] = get_results(filter, filter_values, "total_scan_time")
     # plot = get_plot_parallel_sockets(scan_results, filename)
     plot = get_plot_efficacy(scan_results, filename, f"{op_sys} {browser} {scan_technique}")
     # plot = get_table(scan_results, "table.png")

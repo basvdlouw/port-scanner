@@ -52,7 +52,6 @@ def get_plot_efficacy(data: tuple[list[ScanModel], list[str]], filename: str, ti
         end_open: int = int(get_metadata_property(metadata, "END_ARTIFICIAL_PORT_RANGE"))
         begin: int = int(get_metadata_property(metadata, "BEGIN_PORT"))
         end: int = int(get_metadata_property(metadata, "END_PORT"))
-        port_ranges = [(begin, begin_open - 1), (begin_open, end_open), (end_open + 1, end)]
         for scan_result in scan.results:
             if begin_open <= scan_result[0].port.number <= end_open:
                 colors.append("green")
