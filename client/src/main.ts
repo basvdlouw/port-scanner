@@ -32,7 +32,7 @@ startPortScanner?.addEventListener("click", function handleClick() {
   const resultsStore = new ResultsStore<ScanResult[]>();
   const queue = new ConcurrentQueue(nSockets / nScans, resultsStore);
   const startTime = performance.now();
-  // scan
+  // add scanning jobs to queue
   for (let i = beginPort; i <= endPort; i++) {
     const port: Port = {
       ipaddress: localhost,
@@ -53,9 +53,8 @@ startPortScanner?.addEventListener("click", function handleClick() {
     .waitForCompletion()
     .then(async () => {
       const totalScanTime = performance.now() - startTime;
-      // post scan analysis
-      // analyzePostScanResults(resultsStore, socketTimeout);
       try {
+        // save scan results
         const results = resultsStore.getResults();
         const response = await fetch("http://localhost:3001/scanresults", {
           method: "POST",
