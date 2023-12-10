@@ -30,6 +30,8 @@ def main():
     plot.show()
 
 
+# returns list of typed <ScanModel, metadata> objects based on scan results (json files)
+# Returns tuple[list[ScanModel], list[str]]
 def get_results(filter_properties: [], filter_values: [], sort_key: str):
     directory = get_results_dir(scan_results_directory)
     results: list[ScanModel] = []

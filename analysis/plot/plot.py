@@ -19,7 +19,7 @@ def get_plot_parallel_sockets(data: list[ScanModel], filename: str):
     plt.title("N Parallel sockets, 200ms Socket timeout")
     # fig = plt.figure(figsize=(10, 10))
 
-    y: list[int] = [*range(1, 65536)]
+    y: list[int] = [*range(0, 65536)]
     x = []
 
     for scan in data:
